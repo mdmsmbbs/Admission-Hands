@@ -22,8 +22,8 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // Add base path configuration
-  base: '/',
+  // Add base path configuration for relative asset paths (Hostinger compatibility)
+  base: './',
   // Ensure proper build configuration for SPA routing
   build: {
     outDir: 'dist',
