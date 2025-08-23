@@ -57,7 +57,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="text-base font-semibold">Office Address</h4>
-                <p className="text-sm opacity-90">1104A, Bhutani City Center,</p>
+                <p className="text-sm opacity-90">915, Bhutani City Center,</p>
                 <p className="text-sm opacity-90">Sector 32, Noida, Uttar Pradesh 201301</p>
               </div>
             </motion.div>

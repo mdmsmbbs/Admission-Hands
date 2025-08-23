@@ -71,7 +71,7 @@ const AboutContact = () => {
                     <div>
                       <h4 className="font-medium text-gray-900">Address</h4>
                       <p className="text-gray-600">
-                        1104A, Bhutani City Center, Sector 32, <br />
+                        915, Bhutani City Center, Sector 32, <br />
                         Noida, Uttar Pradesh 201301
                       </p>
                     </div>
