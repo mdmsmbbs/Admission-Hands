@@ -67,8 +67,7 @@
       /* Add content-visibility to improve LCP */
       section {
         content-visibility: auto;
-        /* Use non-zero intrinsic inline size to avoid zero-width sections before paint */
-        contain-intrinsic-size: 1px 500px;
+        contain-intrinsic-size: 0 500px;
       }
 
       /* Disable animations for users who prefer reduced motion */
