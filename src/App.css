@@ -12,15 +12,7 @@ body {
   max-width: 100vw;
 }
 
-/* Custom container utility */
-.container-custom {
-  width: 100%;
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
+/* Container utility moved to components.css to avoid conflicts */
 
 /* Fade-in animation */
 .animate-fade-in {
@@ -262,31 +254,7 @@ body {
   padding-bottom: 60px; /* Add padding to bottom of page content on mobile to account for the footer */
 }
 
-/* Fix for Terms page and About us page */
-.terms-page-content, .about-page-content {
-  padding-top: calc(64px + 32px); /* Header height + LiveAlerts height */
-}
-
-/* Adjust page padding for mobile view with footer */
-@media (max-width: 768px) {
-  body {
-    padding-bottom: 60px;
-    width: 100%;
-  }
-  
-  /* Full width container on mobile */
-  .container-custom {
-    width: 100%;
-    max-width: 100%;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-  
-  /* Ensure all sections take full width */
-  section {
-    width: 100%;
-  }
-}
+/* Mobile styles moved to layout.css */
 
 /* Ensure App container takes full width */
 #root {
