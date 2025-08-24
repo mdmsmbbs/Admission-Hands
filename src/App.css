@@ -255,17 +255,7 @@ body {
   width: 100%;
 }
 
-/* Add padding to the main content to account for the fixed header and LiveAlerts */
-main {
-  padding-top: calc(64px + 32px); /* Header height + LiveAlerts height */
-  width: 100%;
-}
-
-/* Adjust hero section to account for the added padding */
-.hero-section {
-  padding-top: 0;
-  width: 100%;
-}
+/* Removed conflicting main padding rules - handled in layout.css */
 
 /* Fix for mobile footer padding */
 .mobile-footer-padding {

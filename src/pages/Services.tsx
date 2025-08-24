@@ -39,7 +39,7 @@ const ServicesPage = () => {
         structuredData={servicesSchema}
       />
       
-      <main className="flex-grow pt-[99px] w-full">
+      <main className="flex-grow w-full">
         <ServicesHero />
         <div className="container-custom py-8">
           <SpecializedServices />
