@@ -46,9 +46,7 @@ const StandardLayout = ({ children }) => (
   <div className="w-full">
     <Header />
     <LiveAlerts />
-    <main className="flex-grow">
-      {children}
-    </main>
+    {children}
     <Footer />
   </div>
 );
