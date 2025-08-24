@@ -29,7 +29,7 @@ const ServicesPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col w-full">
       <SEO 
         title="Medical Admission Services - AdmissionHands"
         description="Comprehensive admission services for MBBS, BDS, and MD/MS students. Get personalized counseling, document assistance, and guaranteed results."
@@ -39,7 +39,7 @@ const ServicesPage = () => {
         structuredData={servicesSchema}
       />
       
-      <main className="flex-grow">
+      <main className="flex-grow pt-[99px] w-full">
         <ServicesHero />
         <div className="container-custom py-8">
           <SpecializedServices />
