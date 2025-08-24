@@ -1,5 +1,5 @@
 
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import type { RecommendedCollege, DeemedUniversity } from '@/types/colleges';
@@ -8,89 +8,62 @@ export function useRecommendedColleges() {
   const [colleges, setColleges] = useState<RecommendedCollege[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
-  const isMounted = useRef(true);
 
-  const fetchColleges = useCallback(async () => {
-    try {
-      setLoading(true);
-      // Use type assertion to fix TypeScript errors with the recently created table
-      const { data, error } = await supabase
-        .from('recommended_colleges')
-        .select('*')
-        .order('name') as unknown as { data: RecommendedCollege[] | null, error: Error | null };
+  useEffect(() => {
+    async function fetchColleges() {
+      try {
+        setLoading(true);
+        // Use type assertion to fix TypeScript errors with the recently created table
+        const { data, error } = await supabase
+          .from('recommended_colleges')
+          .select('*')
+          .order('name') as unknown as { data: RecommendedCollege[] | null, error: Error | null };
 
-      if (error) throw error;
-      
-      // Only update state if component is still mounted
-      if (isMounted.current) {
+        if (error) throw error;
         setColleges(data || []);
-      }
-    } catch (err) {
-      console.error('Error fetching recommended colleges:', err);
-      if (isMounted.current) {
+      } catch (err) {
+        console.error('Error fetching recommended colleges:', err);
         setError(err instanceof Error ? err : new Error('Failed to fetch colleges'));
         toast.error('Failed to load recommended colleges');
-      }
-    } finally {
-      if (isMounted.current) {
+      } finally {
         setLoading(false);
       }
     }
+
+    fetchColleges();
   }, []);
 
-  useEffect(() => {
-    fetchColleges();
-    
-    return () => {
-      isMounted.current = false;
-    };
-  }, [fetchColleges]);
-
-  return { colleges, loading, error, refetch: fetchColleges };
+  return { colleges, loading, error };
 }
 
 export function useDeemedUniversities() {
   const [universities, setUniversities] = useState<DeemedUniversity[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
-  const isMounted = useRef(true);
 
-  const fetchUniversities = useCallback(async () => {
-    try {
-      setLoading(true);
-      
-      // Use type assertion to fix TypeScript errors with the recently created table
-      const { data, error } = await supabase
-        .from('deemed_universities')
-        .select('*')
-        .order('name') as unknown as { data: DeemedUniversity[] | null, error: Error | null };
+  useEffect(() => {
+    async function fetchUniversities() {
+      try {
+        setLoading(true);
+        // Use type assertion to fix TypeScript errors with the recently created table
+        const { data, error } = await supabase
+          .from('deemed_universities')
+          .select('*')
+          .order('name') as unknown as { data: DeemedUniversity[] | null, error: Error | null };
 
-      if (error) throw error;
-      
-      // Only update state if component is still mounted
-      if (isMounted.current) {
+        if (error) throw error;
         setUniversities(data || []);
-      }
-    } catch (err) {
-      console.error('Error fetching deemed universities:', err);
-      if (isMounted.current) {
+      } catch (err) {
+        console.error('Error fetching deemed universities:', err);
         setError(err instanceof Error ? err : new Error('Failed to fetch universities'));
         toast.error('Failed to load deemed universities');
-      }
-    } finally {
-      if (isMounted.current) {
+      } finally {
         setLoading(false);
       }
     }
+
+    fetchUniversities();
   }, []);
 
-  useEffect(() => {
-    fetchUniversities();
-    
-    return () => {
-      isMounted.current = false;
-    };
-  }, [fetchUniversities]);
-
-  return { universities, loading, error, refetch: fetchUniversities };
+  return { universities, loading, error };
 }

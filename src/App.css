@@ -12,7 +12,15 @@ body {
   max-width: 100vw;
 }
 
-/* Container utility moved to components.css to avoid conflicts */
+/* Custom container utility */
+.container-custom {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 
 /* Fade-in animation */
 .animate-fade-in {
@@ -247,14 +255,48 @@ body {
   width: 100%;
 }
 
-/* Removed conflicting main padding rules - handled in layout.css */
+/* Add padding to the main content to account for the fixed header and LiveAlerts */
+main {
+  padding-top: calc(64px + 32px); /* Header height + LiveAlerts height */
+  width: 100%;
+}
+
+/* Adjust hero section to account for the added padding */
+.hero-section {
+  padding-top: 0;
+  width: 100%;
+}
 
 /* Fix for mobile footer padding */
 .mobile-footer-padding {
   padding-bottom: 60px; /* Add padding to bottom of page content on mobile to account for the footer */
 }
 
-/* Mobile styles moved to layout.css */
+/* Fix for Terms page and About us page */
+.terms-page-content, .about-page-content {
+  padding-top: calc(64px + 32px); /* Header height + LiveAlerts height */
+}
+
+/* Adjust page padding for mobile view with footer */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 60px;
+    width: 100%;
+  }
+  
+  /* Full width container on mobile */
+  .container-custom {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  /* Ensure all sections take full width */
+  section {
+    width: 100%;
+  }
+}
 
 /* Ensure App container takes full width */
 #root {

@@ -6,13 +6,11 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
     max-height: 80vh;
-    contain: content;
   }
 
   /* Ensure the hamburger menu button is always visible and not cropped */
   .mobile-menu-button {
     @apply z-50 min-w-[40px] min-h-[40px] flex items-center justify-center;
-    will-change: transform;
   }
   
   /* LiveAlerts z-index fix */
@@ -30,7 +28,6 @@
     max-height: 80vh;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    contain: content;
   }
 }
 
@@ -43,8 +40,6 @@ header {
   z-index: 50;
   height: 64px; /* Explicitly set header height */
   width: 100%; /* Ensure header takes full width */
-  contain: layout size;
-  will-change: transform;
 }
 
 /* Main content spacing adjustment to completely eliminate the gap */
@@ -54,7 +49,6 @@ main {
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
-  contain: layout;
 }
 
 @media (max-width: 768px) {
@@ -75,7 +69,6 @@ main {
     padding-right: 1rem;
     margin-left: auto;
     margin-right: auto;
-    contain: layout style;
   }
   
   /* Ensure text doesn't overflow on mobile */
@@ -96,17 +89,12 @@ main {
 /* Content preload for better performance */
 .preload-image {
   display: none;
-  width: 1px;
-  height: 1px;
-  position: absolute;
-  opacity: 0;
 }
 
 /* Scroll button styles for MBBS states menu */
 .scroll-button {
   @apply absolute top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full p-1 shadow-md;
-  transition: transform 0.2s ease;
-  will-change: transform;
+  transition: all 0.2s ease;
 }
 
 .scroll-button:hover {
@@ -133,7 +121,6 @@ main {
   margin-top: 0; /* Remove any margin */
   padding-top: 0; /* Remove any padding */
   height: 35px; /* Set explicit height */
-  contain: layout;
 }
 
 /* Ensure terms and privacy policy pages have appropriate padding */
@@ -163,7 +150,6 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  text-rendering: optimizeSpeed;
 }
 
 #root {
@@ -179,7 +165,6 @@ html, body {
   padding-top: 99px !important; /* header height + live alerts height */
   margin-top: 0;
   width: 100%;
-  contain: content;
 }
 
 /* Viewport fix for mobile devices */
@@ -204,7 +189,7 @@ html, body {
   display: none; /* Chrome, Safari and Opera */
 }
 
-/* Testimonial animation with optimized animation */
+/* Testimonial animation */
 @keyframes slideToLeft {
   0% {
     transform: translateX(0);
@@ -230,7 +215,6 @@ html, body {
 section {
   width: 100% !important;
   max-width: 100% !important;
-  contain: content;
 }
 
 /* Full width container overrides */

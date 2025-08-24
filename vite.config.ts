@@ -29,46 +29,12 @@ export default defineConfig(({ mode }) => ({
     outDir: 'dist',
     assetsDir: 'assets',
     emptyOutDir: true,
-    // Optimize chunk size
-    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
-        // Split vendor chunks for better caching
-        manualChunks: (id) => {
-          if (id.includes('node_modules')) {
-            // Group major libraries in their own chunks
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
-            }
-            if (id.includes('framer-motion')) {
-              return 'vendor-framer-motion';
-            }
-            if (id.includes('lucide-react') || id.includes('@radix-ui')) {
-              return 'vendor-ui';
-            }
-            if (id.includes('supabase')) {
-              return 'vendor-supabase';
-            }
-            return 'vendor'; // all other packages in one chunk
-          }
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
         },
       },
     },
-    // Enable minification
-    minify: true,
-    // Enable source maps for production debugging if needed
-    sourcemap: mode === 'development',
-  },
-  // Optimize for performance
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion', 'lucide-react'],
-  },
-  // Enable CSS code splitting
-  css: {
-    modules: {
-      localsConvention: 'camelCase',
-    },
-    // Minify CSS in production
-    devSourcemap: true,
   },
 }));
