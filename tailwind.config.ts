@@ -85,8 +85,6 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				'neon-green': 'hsl(var(--neon-green))',
-				'submenu-bg': 'hsl(var(--submenu-bg))',
 				medical: {
 					50: '#EFF6FF',
 					100: '#DBEAFE',

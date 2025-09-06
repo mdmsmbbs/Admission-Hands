@@ -64,7 +64,7 @@ const Hero = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-1">
             Your Journey to Medical Excellence
           </h1>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-3" style={{ color: '#00feb5' }}>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-400 leading-tight mb-3">
             Starts Here
           </h2>
           
@@ -107,8 +107,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link 
               to="/services" 
-              className="text-white px-5 py-2 rounded-md font-medium transition-colors inline-flex items-center justify-center hover:opacity-90"
-              style={{ backgroundColor: '#00feb5' }}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-md font-medium transition-colors inline-flex items-center justify-center"
             >
               Explore Services
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 h-4 w-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
