@@ -3,31 +3,20 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const Logo = () => {
-  const firstWord = "Admission";
-  const secondWord = "Hands";
-
   return (
     <Link to="/" className="flex items-center">
       <motion.div
         initial={{ opacity: 0.8 }}
         animate={{ opacity: 1 }}
-        whileHover="hover"
-        className="font-bold text-xl sm:text-2xl md:text-3xl"
+        whileHover={{ scale: 1.05 }}
+        transition={{ duration: 0.3 }}
+        className="flex items-center"
       >
-        <motion.span
-          className="text-blue-600"
-          whileHover={{ y: -2 }}
-          transition={{ duration: 0.3 }}
-        >
-          {firstWord}
-        </motion.span>
-        <motion.span
-          className="ml-2 text-medical-600"
-          whileHover={{ y: -2 }}
-          transition={{ duration: 0.3 }}
-        >
-          {secondWord}
-        </motion.span>
+        <img 
+          src="/lovable-uploads/73cbc20f-2ca7-4a59-b80b-d2bd8ca71846.png" 
+          alt="Admission Hands Logo"
+          className="h-8 sm:h-10 md:h-12 w-auto"
+        />
       </motion.div>
     </Link>
   );
