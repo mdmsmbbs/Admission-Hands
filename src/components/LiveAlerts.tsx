@@ -173,12 +173,12 @@ const LiveAlerts = () => {
           className="flex items-center space-x-4 overflow-hidden whitespace-nowrap"
         >
           {alerts.concat(alerts).map((alert, index) => (
-            <React.Fragment key={`${alert.id}-${index}`}>
+            <span key={`${alert.id}-${index}`} className="inline-flex items-center gap-2">
               {renderAlertLink(alert)}
               <Star 
                 className={`w-4 h-4 shrink-0 ${starBlink ? 'text-[#1EAEDB]' : 'text-gray-200'} transition-colors duration-500`}
               />
-            </React.Fragment>
+            </span>
           ))}
         </div>
       </div>

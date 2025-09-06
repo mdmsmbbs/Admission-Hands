@@ -9,6 +9,12 @@ import Videos from './pages/Videos';
 import MBBSIndia from './pages/MBBSIndia';
 import MBBSState from './pages/MBBSState';
 import DeemedUniversities from './pages/mbbs/DeemedUniversities';
+// PG Medical pages
+import PGMedical from './pages/PGMedical';
+import MDCourses from './pages/MDCourses';
+import MSCourses from './pages/MSCourses';
+import PGAdmissionProcess from './pages/PGAdmissionProcess';
+import PGColleges from './pages/PGColleges';
 
 // Admin pages
 import AdminLogin from './pages/admin/AdminLogin';
@@ -153,6 +159,48 @@ function App() {
             element={
               <StandardLayout>
                 <Videos />
+              </StandardLayout>
+            }
+          />
+
+          {/* PG Medical Routes */}
+          <Route
+            path="/pg-medical"
+            element={
+              <StandardLayout>
+                <PGMedical />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/md-courses"
+            element={
+              <StandardLayout>
+                <MDCourses />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/ms-courses"
+            element={
+              <StandardLayout>
+                <MSCourses />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/admission-process"
+            element={
+              <StandardLayout>
+                <PGAdmissionProcess />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/colleges"
+            element={
+              <StandardLayout>
+                <PGColleges />
               </StandardLayout>
             }
           />
