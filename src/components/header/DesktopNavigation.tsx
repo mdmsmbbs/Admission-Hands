@@ -111,15 +111,15 @@ const DesktopNavigation = ({ isActive, location, isMBBSIndiaRoute = false }: Des
                       <Link
                         key={state}
                         to={`/mbbs-india/${state.toLowerCase().replace(/\s+/g, '-')}`}
-                        className={`flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700 ${
+                        className={`flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md bg-indigo-50 hover:bg-indigo-100 border-l-4 border-indigo-500 ${
                           isActive(`/mbbs-india/${state.toLowerCase().replace(/\s+/g, '-')}`) 
                             ? 'shadow-lg' 
                             : ''
                         }`}
                       >
                         <div>
-                          <div className="text-sm font-medium text-white">{state}</div>
-                          <p className="text-xs text-gray-300 mt-0.5">
+                          <div className="text-sm font-medium text-gray-900">{state}</div>
+                          <p className="text-xs text-gray-500 mt-0.5">
                             Medical Colleges
                           </p>
                         </div>
@@ -157,11 +157,11 @@ const DesktopNavigation = ({ isActive, location, isMBBSIndiaRoute = false }: Des
                 <div className="space-y-1">
                   <Link
                     to="/pg-medical/md-courses"
-                    className="flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700"
+                    className="flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md bg-indigo-50 hover:bg-indigo-100 border-l-4 border-indigo-500"
                   >
                     <div>
-                      <div className="text-sm font-medium text-white">MD Courses</div>
-                      <p className="text-xs text-gray-300 mt-0.5">
+                      <div className="text-sm font-medium text-gray-900">MD Courses</div>
+                      <p className="text-xs text-gray-500 mt-0.5">
                         Doctor of Medicine Specializations
                       </p>
                     </div>
@@ -169,11 +169,11 @@ const DesktopNavigation = ({ isActive, location, isMBBSIndiaRoute = false }: Des
                   
                   <Link
                     to="/pg-medical/ms-courses"
-                    className="flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700"
+                    className="flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md bg-indigo-50 hover:bg-indigo-100 border-l-4 border-indigo-500"
                   >
                     <div>
-                      <div className="text-sm font-medium text-white">MS Courses</div>
-                      <p className="text-xs text-gray-300 mt-0.5">
+                      <div className="text-sm font-medium text-gray-900">MS Courses</div>
+                      <p className="text-xs text-gray-500 mt-0.5">
                         Master of Surgery Specializations
                       </p>
                     </div>
@@ -181,11 +181,11 @@ const DesktopNavigation = ({ isActive, location, isMBBSIndiaRoute = false }: Des
                   
                   <Link
                     to="/pg-medical/admission-process"
-                    className="flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700"
+                    className="flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md bg-indigo-50 hover:bg-indigo-100 border-l-4 border-indigo-500"
                   >
                     <div>
-                      <div className="text-sm font-medium text-white">Admission Process</div>
-                      <p className="text-xs text-gray-300 mt-0.5">
+                      <div className="text-sm font-medium text-gray-900">Admission Process</div>
+                      <p className="text-xs text-gray-500 mt-0.5">
                         NEET PG & Direct Admission
                       </p>
                     </div>
@@ -193,11 +193,11 @@ const DesktopNavigation = ({ isActive, location, isMBBSIndiaRoute = false }: Des
                   
                   <Link
                     to="/pg-medical/colleges"
-                    className="flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700"
+                    className="flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md bg-indigo-50 hover:bg-indigo-100 border-l-4 border-indigo-500"
                   >
                     <div>
-                      <div className="text-sm font-medium text-white">Top PG Colleges</div>
-                      <p className="text-xs text-gray-300 mt-0.5">
+                      <div className="text-sm font-medium text-gray-900">Top PG Colleges</div>
+                      <p className="text-xs text-gray-500 mt-0.5">
                         Best Medical Colleges for PG
                       </p>
                     </div>
