@@ -160,12 +160,16 @@ const LiveAlerts = () => {
 
   return (
     <div 
-      className="bg-gradient-to-r from-indigo-50 to-purple-50 border-b fixed top-[64px] left-0 right-0 z-40 shadow-sm py-[4px] w-full live-alerts-container"
+      className="bg-gradient-to-r from-indigo-50 to-purple-50 border-b fixed top-[clamp(3.5rem,8vh,4rem)] left-0 right-0 z-40 shadow-sm w-full live-alerts-container"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={() => setIsPaused(true)}
       onTouchEnd={() => setIsPaused(false)}
-      style={{ height: '35px' }} 
+      style={{ 
+        height: 'clamp(2rem, 5vh, 2.5rem)',
+        paddingTop: 'clamp(0.25rem, 1vh, 0.5rem)',
+        paddingBottom: 'clamp(0.25rem, 1vh, 0.5rem)'
+      }} 
     >
       <div className="container-custom flex items-center h-full">
         <div 

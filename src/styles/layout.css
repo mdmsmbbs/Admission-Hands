@@ -31,24 +31,25 @@
   }
 }
 
-/* Fixed positioning for header and live alerts */
+/* Fixed positioning for header and live alerts - Responsive */
 header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 50;
-  height: 64px; /* Explicitly set header height */
-  width: 100%; /* Ensure header takes full width */
+  height: clamp(3.5rem, 8vh, 4rem); /* Responsive header height */
+  width: 100%;
 }
 
-/* Main content spacing adjustment to completely eliminate the gap */
+/* Main content responsive spacing */
 main {
-  margin-top: 64px; /* Exactly header height with no extra space */
-  padding-top: 0; /* Remove padding to eliminate gap */
+  margin-top: clamp(3.5rem, 8vh, 4rem); /* Match header height */
+  padding-top: 0;
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
+  min-height: calc(100vh - clamp(3.5rem, 8vh, 4rem));
 }
 
 @media (max-width: 768px) {
@@ -110,17 +111,17 @@ main {
   @apply right-0;
 }
 
-/* Fix for livealerts z-index and positioning - eliminated the gap */
+/* Live alerts responsive positioning */
 .live-alerts-container {
   position: fixed !important;
-  top: 64px !important; /* Position immediately below header */
+  top: clamp(3.5rem, 8vh, 4rem) !important; /* Position below responsive header */
   left: 0;
   right: 0;
   z-index: 40 !important;
   width: 100%;
-  margin-top: 0; /* Remove any margin */
-  padding-top: 0; /* Remove any padding */
-  height: 35px; /* Set explicit height */
+  margin-top: 0;
+  padding-top: 0;
+  height: clamp(2rem, 5vh, 2.5rem); /* Responsive height */
   display: flex;
   align-items: center;
 }
@@ -139,19 +140,31 @@ body [id^="privacy"] h1 {
   margin-bottom: 1rem;
 }
 
-/* Fix spacing on all pages - add padding to account for header and live alerts */
+/* Responsive hero section spacing */
 .hero-section {
-  padding-top: 99px !important; /* 64px (header) + 35px (live alerts) */
+  padding-top: calc(clamp(3.5rem, 8vh, 4rem) + clamp(2rem, 5vh, 2.5rem)) !important;
   margin-top: 0 !important;
 }
 
-/* Fix width issues on all devices */
-html, body {
+/* Fix width issues on all devices - Updated for better responsiveness */
+html {
   max-width: 100vw;
   width: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 100vw;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+  line-height: 1.6;
 }
 
 #root {
@@ -160,11 +173,14 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Fix for hero spacing - ensure it comes right after live alerts */
+/* Responsive spacing for sections after live alerts */
 .live-alerts-container + section {
-  padding-top: 99px !important; /* header height + live alerts height */
+  padding-top: calc(clamp(3.5rem, 8vh, 4rem) + clamp(2rem, 5vh, 2.5rem)) !important;
   margin-top: 0;
   width: 100%;
 }
@@ -175,9 +191,9 @@ html, body {
   zoom: 1.0;
 }
 
-/* Fix for terms page header visibility */
+/* Responsive spacing for page content */
 .terms-page-content, .know-us-page-content, .deemed-universities-page {
-  padding-top: 99px !important; /* Header height + live alerts height */
+  padding-top: calc(clamp(3.5rem, 8vh, 4rem) + clamp(2rem, 5vh, 2.5rem)) !important;
   margin-top: 0;
 }
 
@@ -225,41 +241,73 @@ section {
   box-sizing: border-box;
 }
 
-/* Full width container overrides */
+/* Enhanced responsive container system */
 .container-custom {
   width: 100%;
-  max-width: 1440px; /* Increased max-width for larger screens */
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding-left: clamp(1rem, 4vw, 5rem);
+  padding-right: clamp(1rem, 4vw, 5rem);
 }
 
-@media (max-width: 640px) {
+/* Responsive breakpoints for container */
+@media (max-width: 479px) {
   .container-custom {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 }
 
-@media (min-width: 641px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 639px) {
+  .container-custom {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .container-custom {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
   .container-custom {
     padding-left: 2rem;
     padding-right: 2rem;
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (min-width: 1024px) and (max-width: 1279px) {
   .container-custom {
+    max-width: 1024px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .container-custom {
+    max-width: 1280px;
     padding-left: 3rem;
     padding-right: 3rem;
   }
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 1536px) and (max-width: 1919px) {
   .container-custom {
     max-width: 1440px;
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container-custom {
+    max-width: 1600px;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }

@@ -41,11 +41,11 @@ const Header: React.FC = () => {
   // Check if the current route is MBBS India - moved outside of return statement
   const isMBBSIndiaRoute = location.pathname.includes('/mbbs-india');
 
-  // Force visibility for all pages
-  const headerClass = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-[64px] w-full ${
+  // Responsive header styling
+  const headerClass = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full ${
     isScrolled 
-      ? 'py-2 bg-white text-gray-800 shadow-lg' 
-      : 'py-2 bg-gray-50 text-gray-800'
+      ? 'h-[clamp(3.5rem,8vh,4rem)] py-2 bg-white text-gray-800 shadow-lg' 
+      : 'h-[clamp(3.5rem,8vh,4rem)] py-2 bg-gray-50 text-gray-800'
     }`;
 
   return (
