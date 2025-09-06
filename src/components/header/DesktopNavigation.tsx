@@ -94,7 +94,7 @@ const DesktopNavigation = ({ isActive, location, isMBBSIndiaRoute = false }: Des
               </span>
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <div className="w-[300px] p-4 mbbs-india-submenu bg-white shadow-2xl rounded-lg border border-gray-100">
+              <div className="w-[300px] p-4 mbbs-india-submenu shadow-2xl rounded-lg border border-gray-100" style={{ backgroundColor: '#2c3949' }}>
                 <div className="flex justify-end mb-3">
                   <Link 
                     to="/mbbs-india" 
