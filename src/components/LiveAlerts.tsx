@@ -167,13 +167,13 @@ const LiveAlerts = () => {
       onTouchEnd={() => setIsPaused(false)}
       style={{ height: '35px' }} 
     >
-      <div className="container-custom">
+      <div className="container-custom flex items-center h-full">
         <div 
           ref={scrollContainerRef}
-          className="flex items-center space-x-4 overflow-hidden whitespace-nowrap"
+          className="flex items-center space-x-6 overflow-hidden whitespace-nowrap w-full"
         >
           {alerts.concat(alerts).map((alert, index) => (
-            <span key={`${alert.id}-${index}`} className="inline-flex items-center gap-2">
+            <span key={`${alert.id}-${index}`} className="inline-flex items-center gap-4 shrink-0">
               {renderAlertLink(alert)}
               <Star 
                 className={`w-4 h-4 shrink-0 ${starBlink ? 'text-[#1EAEDB]' : 'text-gray-200'} transition-colors duration-500`}

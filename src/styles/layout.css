@@ -121,6 +121,8 @@ main {
   margin-top: 0; /* Remove any margin */
   padding-top: 0; /* Remove any padding */
   height: 35px; /* Set explicit height */
+  display: flex;
+  align-items: center;
 }
 
 /* Ensure terms and privacy policy pages have appropriate padding */
@@ -215,20 +217,49 @@ html, body {
 section {
   width: 100% !important;
   max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* Ensure no horizontal overflow */
+* {
+  box-sizing: border-box;
 }
 
 /* Full width container overrides */
 .container-custom {
   width: 100%;
-  max-width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  max-width: 1440px; /* Increased max-width for larger screens */
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media (min-width: 1280px) {
+@media (max-width: 640px) {
   .container-custom {
-    max-width: 1280px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container-custom {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .container-custom {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1441px) {
+  .container-custom {
+    max-width: 1440px;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }

@@ -47,7 +47,7 @@ const StandardLayout = ({ children }) => (
 function App() {
   return (
     <Router>
-      <div className="w-full max-w-[100vw] overflow-x-hidden">
+      <div className="min-h-screen w-full max-w-none overflow-x-hidden">
         <ScrollToTop />
         <Routes>
           {/* Admin Routes */}
