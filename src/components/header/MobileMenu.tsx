@@ -13,6 +13,7 @@ interface MobileMenuProps {
 
 const MobileMenu = ({ isOpen, onToggle, isActive, isMBBSIndiaRoute = false }: MobileMenuProps) => {
   const [isIndiaExpanded, setIsIndiaExpanded] = useState(false);
+  const [isPGExpanded, setIsPGExpanded] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -21,6 +22,7 @@ const MobileMenu = ({ isOpen, onToggle, isActive, isMBBSIndiaRoute = false }: Mo
     } else {
       document.body.style.overflow = 'unset';
       setIsIndiaExpanded(false);
+      setIsPGExpanded(false);
     }
     
     return () => {
@@ -142,6 +144,74 @@ const MobileMenu = ({ isOpen, onToggle, isActive, isMBBSIndiaRoute = false }: Mo
                           </Link>
                         );
                       })}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <div>
+                <button
+                  onClick={() => setIsPGExpanded(!isPGExpanded)}
+                  className={cn(
+                    "w-full flex items-center justify-between px-4 py-3 rounded-lg transition-colors text-base",
+                    isActive('/pg-medical') 
+                      ? "bg-gradient-to-r from-purple-50 to-purple-100 text-purple-700 shadow-sm border-l-4 border-purple-500" 
+                      : "text-purple-600 hover:bg-gray-50"
+                  )}
+                >
+                  <span className="font-bold text-purple-600">PG</span>
+                  {isPGExpanded ? <ChevronDown className="w-5 h-5" /> : <ChevronRight className="w-5 h-5" />}
+                </button>
+                
+                {isPGExpanded && (
+                  <div className="mt-3 space-y-1 bg-gray-50 p-4 rounded-lg">
+                    <div className="flex justify-end mb-3">
+                      <Link 
+                        to="/pg-medical" 
+                        className="flex items-center gap-1 text-xs font-medium px-3 py-1.5 bg-white text-purple-600 hover:shadow-md rounded-full transition-all"
+                        onClick={onToggle}
+                      >
+                        <span>PG Medical</span>
+                        <ArrowRight className="w-3.5 h-3.5 text-purple-600" />
+                      </Link>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <Link 
+                        to="/pg-medical/md-courses"
+                        className="block p-3 text-[15px] bg-white hover:bg-gray-50 rounded-md transition-all transform hover:-translate-y-1 hover:shadow-sm text-gray-700 hover:border-l-2 hover:border-purple-300"
+                        onClick={onToggle}
+                      >
+                        <div className="font-medium">MD Courses</div>
+                        <div className="text-xs text-gray-500 mt-0.5">Doctor of Medicine Specializations</div>
+                      </Link>
+                      
+                      <Link 
+                        to="/pg-medical/ms-courses"
+                        className="block p-3 text-[15px] bg-white hover:bg-gray-50 rounded-md transition-all transform hover:-translate-y-1 hover:shadow-sm text-gray-700 hover:border-l-2 hover:border-purple-300"
+                        onClick={onToggle}
+                      >
+                        <div className="font-medium">MS Courses</div>
+                        <div className="text-xs text-gray-500 mt-0.5">Master of Surgery Specializations</div>
+                      </Link>
+                      
+                      <Link 
+                        to="/pg-medical/admission-process"
+                        className="block p-3 text-[15px] bg-white hover:bg-gray-50 rounded-md transition-all transform hover:-translate-y-1 hover:shadow-sm text-gray-700 hover:border-l-2 hover:border-purple-300"
+                        onClick={onToggle}
+                      >
+                        <div className="font-medium">Admission Process</div>
+                        <div className="text-xs text-gray-500 mt-0.5">NEET PG & Direct Admission</div>
+                      </Link>
+                      
+                      <Link 
+                        to="/pg-medical/colleges"
+                        className="block p-3 text-[15px] bg-white hover:bg-gray-50 rounded-md transition-all transform hover:-translate-y-1 hover:shadow-sm text-gray-700 hover:border-l-2 hover:border-purple-300"
+                        onClick={onToggle}
+                      >
+                        <div className="font-medium">Top PG Colleges</div>
+                        <div className="text-xs text-gray-500 mt-0.5">Best Medical Colleges for PG</div>
+                      </Link>
                     </div>
                   </div>
                 )}

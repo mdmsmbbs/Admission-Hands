@@ -132,6 +132,82 @@ const DesktopNavigation = ({ isActive, location, isMBBSIndiaRoute = false }: Des
           </NavigationMenuItem>
 
           <NavigationMenuItem>
+            <NavigationMenuTrigger
+              className={cn(
+                "px-4 py-2 text-sm font-medium rounded-md transition-colors",
+                isActive('/pg-medical') 
+                  ? "bg-medical-50 text-medical-700 shadow-sm" 
+                  : "text-gray-700 hover:bg-gray-100"
+              )}
+            >
+              <span className="font-bold text-purple-600">PG</span>
+            </NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <div className="w-[320px] p-4 bg-white shadow-2xl rounded-lg border border-gray-100">
+                <div className="flex justify-end mb-3">
+                  <Link 
+                    to="/pg-medical" 
+                    className="flex items-center gap-1 text-sm font-medium px-3 py-2 bg-gradient-to-r from-purple-100 to-indigo-100 text-gray-700 hover:shadow-md rounded-full transition-all"
+                  >
+                    <span className="text-purple-600 font-medium">PG Medical</span>
+                    <ArrowRight className="w-4 h-4 text-purple-600" />
+                  </Link>
+                </div>
+                
+                <div className="space-y-1">
+                  <Link
+                    to="/pg-medical/md-courses"
+                    className="flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md bg-purple-50 hover:bg-purple-100 border-l-4 border-purple-500"
+                  >
+                    <div>
+                      <div className="text-sm font-medium">MD Courses</div>
+                      <p className="text-xs text-gray-500 mt-0.5">
+                        Doctor of Medicine Specializations
+                      </p>
+                    </div>
+                  </Link>
+                  
+                  <Link
+                    to="/pg-medical/ms-courses"
+                    className="flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md bg-indigo-50 hover:bg-indigo-100 border-l-4 border-indigo-500"
+                  >
+                    <div>
+                      <div className="text-sm font-medium">MS Courses</div>
+                      <p className="text-xs text-gray-500 mt-0.5">
+                        Master of Surgery Specializations
+                      </p>
+                    </div>
+                  </Link>
+                  
+                  <Link
+                    to="/pg-medical/admission-process"
+                    className="flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md bg-cyan-50 hover:bg-cyan-100 border-l-4 border-cyan-500"
+                  >
+                    <div>
+                      <div className="text-sm font-medium">Admission Process</div>
+                      <p className="text-xs text-gray-500 mt-0.5">
+                        NEET PG & Direct Admission
+                      </p>
+                    </div>
+                  </Link>
+                  
+                  <Link
+                    to="/pg-medical/colleges"
+                    className="flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md bg-emerald-50 hover:bg-emerald-100 border-l-4 border-emerald-500"
+                  >
+                    <div>
+                      <div className="text-sm font-medium">Top PG Colleges</div>
+                      <p className="text-xs text-gray-500 mt-0.5">
+                        Best Medical Colleges for PG
+                      </p>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
             <Link to="/services">
               <NavigationMenuLink
                 className={cn(
