@@ -111,12 +111,11 @@ const DesktopNavigation = ({ isActive, location, isMBBSIndiaRoute = false }: Des
                       <Link
                         key={state}
                         to={`/mbbs-india/${state.toLowerCase().replace(/\s+/g, '-')}`}
-                        className={`flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md border-l-4 border-gray-400 ${
+                        className={`flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700 ${
                           isActive(`/mbbs-india/${state.toLowerCase().replace(/\s+/g, '-')}`) 
-                            ? 'bg-opacity-70 shadow-sm' 
+                            ? 'shadow-lg' 
                             : ''
                         }`}
-                        style={{ backgroundColor: '#2c3949' }}
                       >
                         <div>
                           <div className="text-sm font-medium text-white">{state}</div>
@@ -158,8 +157,7 @@ const DesktopNavigation = ({ isActive, location, isMBBSIndiaRoute = false }: Des
                 <div className="space-y-1">
                   <Link
                     to="/pg-medical/md-courses"
-                    className="flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md border-l-4 border-gray-400"
-                    style={{ backgroundColor: '#6366f1' }}
+                    className="flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700"
                   >
                     <div>
                       <div className="text-sm font-medium text-white">MD Courses</div>
@@ -171,8 +169,7 @@ const DesktopNavigation = ({ isActive, location, isMBBSIndiaRoute = false }: Des
                   
                   <Link
                     to="/pg-medical/ms-courses"
-                    className="flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md border-l-4 border-gray-400"
-                    style={{ backgroundColor: '#6366f1' }}
+                    className="flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700"
                   >
                     <div>
                       <div className="text-sm font-medium text-white">MS Courses</div>
@@ -184,8 +181,7 @@ const DesktopNavigation = ({ isActive, location, isMBBSIndiaRoute = false }: Des
                   
                   <Link
                     to="/pg-medical/admission-process"
-                    className="flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md border-l-4 border-gray-400"
-                    style={{ backgroundColor: '#6366f1' }}
+                    className="flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700"
                   >
                     <div>
                       <div className="text-sm font-medium text-white">Admission Process</div>
@@ -197,8 +193,7 @@ const DesktopNavigation = ({ isActive, location, isMBBSIndiaRoute = false }: Des
                   
                   <Link
                     to="/pg-medical/colleges"
-                    className="flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md border-l-4 border-gray-400"
-                    style={{ backgroundColor: '#6366f1' }}
+                    className="flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700"
                   >
                     <div>
                       <div className="text-sm font-medium text-white">Top PG Colleges</div>
