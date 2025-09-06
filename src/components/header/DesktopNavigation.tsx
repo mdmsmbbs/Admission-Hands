@@ -94,7 +94,7 @@ const DesktopNavigation = ({ isActive, location, isMBBSIndiaRoute = false }: Des
               </span>
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <div className="w-[300px] p-4 mbbs-india-submenu bg-white shadow-2xl rounded-lg border border-gray-100">
+              <div className="w-[300px] p-4 mbbs-india-submenu bg-submenu-bg shadow-2xl rounded-lg border border-gray-100">
                 <div className="flex justify-end mb-3">
                   <Link 
                     to="/mbbs-india" 
@@ -111,15 +111,15 @@ const DesktopNavigation = ({ isActive, location, isMBBSIndiaRoute = false }: Des
                       <Link
                         key={state}
                         to={`/mbbs-india/${state.toLowerCase().replace(/\s+/g, '-')}`}
-                        className={`flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md ${stateColors[index]} ${
+                        className={`flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md bg-submenu-bg hover:bg-gray-600 border border-gray-500 ${
                           isActive(`/mbbs-india/${state.toLowerCase().replace(/\s+/g, '-')}`) 
                             ? 'bg-opacity-70 shadow-sm' 
                             : ''
                         }`}
                       >
                         <div>
-                          <div className="text-sm font-medium">{state}</div>
-                          <p className="text-xs text-gray-500 mt-0.5">
+                          <div className="text-sm font-medium text-white">{state}</div>
+                          <p className="text-xs text-gray-300 mt-0.5">
                             Medical Colleges
                           </p>
                         </div>

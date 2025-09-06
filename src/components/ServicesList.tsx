@@ -10,28 +10,28 @@ const ServicesList = () => {
       description: "Complete assistance for securing admission in top medical colleges across India.",
       icon: <BookOpen className="h-5 w-5" />,
       delay: 0,
-      color: "bg-medical-600"
+      color: "neon-green"
     },
     {
       title: "Deemed University Admissions",
       description: "Expert guidance for securing seats in prestigious deemed medical universities.",
       icon: <Building className="h-5 w-5" />,
       delay: 0.2,
-      color: "bg-blue-600"
+      color: "neon-green"
     },
     {
       title: "Documentation Assistance",
       description: "Comprehensive support with application forms and required documentation.",
       icon: <ClipboardCheck className="h-5 w-5" />,
       delay: 0.4,
-      color: "bg-teal-600"
+      color: "neon-green"
     },
     {
       title: "Post-Admission Support",
       description: "Ongoing assistance after admission including accommodation and orientation.",
       icon: <CheckCircle className="h-5 w-5" />,
       delay: 0.5,
-      color: "bg-medical-600"
+      color: "neon-green"
     }
   ];
 
@@ -59,7 +59,7 @@ const ServicesList = () => {
               viewport={{ once: true }}
             >
               <div className="flex items-start gap-3">
-                <div className={`${service.color} p-2.5 rounded-lg text-white shrink-0`}>
+                <div className={`bg-${service.color} p-2.5 rounded-lg text-white shrink-0`}>
                   {service.icon}
                 </div>
                 <div>

@@ -108,7 +108,7 @@ const StatCard = React.memo(({ stat, shouldAnimate }: { stat: typeof stats[0], s
 });
 
 const TestimonialCard = React.memo(({ testimonial }: { testimonial: typeof testimonials[0] }) => (
-  <div className={`bg-gradient-to-br ${testimonial.color} rounded-xl p-1 shadow-md hover:shadow-lg transition-all duration-300 min-w-[300px] max-w-[350px] flex-shrink-0 mx-2 transform hover:scale-105 hover:-rotate-1`}>
+  <div className={`bg-gradient-to-br ${testimonial.color} rounded-xl p-1 shadow-md hover:shadow-lg transition-all duration-300 min-w-[300px] max-w-[350px] flex-shrink-0 mx-2 transform hover:scale-105 hover:-rotate-1 border-2 border-neon-green`}>
     <div className="bg-white rounded-lg p-5 h-full">
       <div className="flex mb-3">
         {Array(testimonial.rating).fill(0).map((_, i) => (
@@ -253,7 +253,7 @@ const Stats: React.FC = () => {
         {/* Testimonials Section with Horizontal Scroll */}
         <div className="mt-12">
           <div className="flex items-center justify-between mb-6">
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 via-medical-600 to-teal-600 bg-clip-text text-transparent">What Our Students Say</h3>
+            <h3 className="text-2xl font-bold text-black">What Our Students Say</h3>
             <div className="flex items-center space-x-2">
               <button 
                 onClick={() => handleScroll('left')} 
