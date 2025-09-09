@@ -4,16 +4,17 @@ import { Button } from '@/components/ui/button';
 
 const PGCollegesHero = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
-      <div className="container-custom text-center">
-        <Badge className="mb-4 bg-purple-600 text-white">Top PG Medical Colleges</Badge>
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">
-          Best <span className="text-purple-600">PG Medical Colleges</span> in India
+    <section className="hero-section section-padding">
+      <div className="hero-overlay"></div>
+      <div className="container-custom text-center relative z-10">
+        <Badge className="mb-6 bg-accent/10 text-accent border border-accent/20 backdrop-blur-sm">Top PG Medical Colleges</Badge>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          Best <span className="text-accent">PG Medical Colleges</span> in India
         </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+        <p className="text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
           Discover top-ranked medical colleges offering excellent postgraduate programs with world-class infrastructure and experienced faculty.
         </p>
-        <Button className="bg-purple-600 hover:bg-purple-700">Explore Colleges</Button>
+        <Button className="btn-accent px-8 py-3 text-lg">Explore Colleges</Button>
       </div>
     </section>
   );

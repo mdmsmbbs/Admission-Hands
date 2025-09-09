@@ -4,16 +4,17 @@ import { Button } from '@/components/ui/button';
 
 const MSCoursesHero = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-indigo-50 to-blue-50">
-      <div className="container-custom text-center">
-        <Badge className="mb-4 bg-indigo-600 text-white">Master of Surgery</Badge>
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">
-          MS <span className="text-indigo-600">Courses</span>
+    <section className="hero-section section-padding">
+      <div className="hero-overlay"></div>
+      <div className="container-custom text-center relative z-10">
+        <Badge className="mb-6 bg-secondary/10 text-secondary border border-secondary/20 backdrop-blur-sm">Master of Surgery</Badge>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          MS <span className="text-secondary">Courses</span>
         </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+        <p className="text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
           Master surgical specializations and advance your career with hands-on expertise in modern surgical techniques and patient care.
         </p>
-        <Button className="bg-indigo-600 hover:bg-indigo-700">Explore Specializations</Button>
+        <Button className="btn-secondary px-8 py-3 text-lg">Explore Specializations</Button>
       </div>
     </section>
   );

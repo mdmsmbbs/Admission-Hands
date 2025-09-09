@@ -4,25 +4,53 @@
     @apply mx-auto px-2 sm:px-3 lg:px-4 max-w-7xl w-full;
   }
   
+  /* Enhanced Button Components */
   .btn-primary {
-    @apply bg-medical-500 hover:bg-medical-600 text-white font-semibold py-1.5 px-3 sm:py-2 sm:px-4 rounded-md transition-all shadow-md hover:shadow-lg;
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-2 px-4 rounded-md shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-medium)] transition-[var(--transition-base)];
   }
   
   .btn-secondary {
-    @apply bg-teal-500 hover:bg-teal-600 text-white font-semibold py-1.5 px-3 sm:py-2 sm:px-4 rounded-md transition-all shadow-md hover:shadow-lg;
+    @apply bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold py-2 px-4 rounded-md shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-medium)] transition-[var(--transition-base)];
+  }
+  
+  .btn-accent {
+    @apply bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-2 px-4 rounded-md shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-medium)] transition-[var(--transition-base)];
   }
   
   .btn-outline {
-    @apply border-2 border-medical-500 text-medical-500 hover:bg-medical-50 font-semibold py-1.5 px-3 sm:py-2 sm:px-4 rounded-md transition-all;
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold py-2 px-4 rounded-md transition-[var(--transition-base)];
+  }
+  
+  /* Enhanced Card Components */
+  .card-elegant {
+    @apply bg-card border border-border rounded-lg shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-medium)] transition-[var(--transition-base)];
   }
   
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+    @apply transition-[var(--transition-base)] hover:shadow-[var(--shadow-medium)] hover:-translate-y-1;
+  }
+  
+  .card-gradient {
+    background: var(--gradient-card);
+    @apply shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-medium)] transition-[var(--transition-base)];
   }
 
-  /* Reduced spacing for sections */
+  /* Enhanced Section Components */
   .section-padding {
-    @apply py-4 sm:py-6 md:py-8;
+    @apply py-8 sm:py-12 md:py-16;
+  }
+  
+  .section-padding-small {
+    @apply py-6 sm:py-8 md:py-10;
+  }
+  
+  .hero-section {
+    @apply relative overflow-hidden;
+    background: var(--gradient-hero);
+  }
+  
+  .hero-overlay {
+    @apply absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20;
   }
 
   /* Adjusted responsive grid layouts with reduced gaps */
