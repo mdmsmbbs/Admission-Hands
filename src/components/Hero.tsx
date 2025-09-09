@@ -51,8 +51,8 @@ const Hero = () => {
       }}
       role="banner"
     >
-      {/* Removed dark overlay to show original image */}
-      <div className="absolute inset-0 bg-black opacity-0"></div>
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black opacity-70"></div>
       
       <div className="container-custom relative z-10 py-16">
         <div className="flex flex-col items-start max-w-3xl">
