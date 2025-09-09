@@ -43,7 +43,7 @@ const Hero = () => {
     <section 
       className="relative hero-section w-full" 
       style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1551038247-3d9af20df552?q=80&w=1470&auto=format&fit=crop&quality=80')",
+        backgroundImage: "url('/lovable-uploads/1692a314-14b2-49c4-a02f-8451de49799d.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         width: '100%',
