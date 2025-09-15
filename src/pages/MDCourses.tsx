@@ -169,7 +169,7 @@ const MDCourses: React.FC = () => {
         ogDescription="Comprehensive guide to MD courses and specializations in India."
       />
       
-      <main className="container-custom py-8 pt-24">
+      <main className="container-custom py-8 pt-32">
         <div className="flex gap-8">
           {/* Main Content */}
           <div className="flex-1">

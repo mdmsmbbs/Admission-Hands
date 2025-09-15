@@ -32,7 +32,7 @@ const MDNuclearMedicine: React.FC = () => {
         <meta property="og:description" content="Comprehensive guide to pursuing MD in Nuclear Medicine in India." />
       </Helmet>
 
-      <main className="container-custom py-8 pt-24">
+      <main className="container-custom py-8 pt-32">
         <div className="flex gap-8">
           {/* Main Content */}
           <div className="flex-1">

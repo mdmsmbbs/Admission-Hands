@@ -29,7 +29,7 @@ const MDRespiratoryMedicine = () => {
       </Helmet>
 
       <div className="min-h-screen bg-background">
-        <div className="container-custom py-8">
+        <div className="container-custom py-8 pt-32">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Main Content */}
             <div className="flex-1">

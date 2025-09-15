@@ -21,7 +21,7 @@ const MDPediatrics: React.FC = () => {
         ogDescription="Comprehensive guide to pursuing MD in Pediatrics in India."
       />
       
-      <main className="container-custom py-8">
+      <main className="container-custom py-8 pt-32">
         <div className="flex gap-8">
           <div className="flex-1">
             {/* Hero Section */}

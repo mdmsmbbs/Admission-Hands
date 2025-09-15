@@ -21,7 +21,7 @@ const MDGeneralMedicine: React.FC = () => {
         ogDescription="Complete guide to pursuing MD in General Medicine in India."
       />
       
-      <main className="container-custom py-8">
+      <main className="container-custom py-8 pt-32">
         <div className="flex gap-8">
           <div className="flex-1">
             {/* Hero Section */}
