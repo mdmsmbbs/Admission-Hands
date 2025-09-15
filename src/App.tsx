@@ -36,6 +36,14 @@ import MDSportsMedicine from './pages/md/MDSportsMedicine';
 import MDDermatology from './pages/md/MDDermatology';
 import MDFamilyMedicine from './pages/md/MDFamilyMedicine';
 
+// MS Specialization Pages
+import MSGeneralSurgery from './pages/ms/MSGeneralSurgery';
+import MSOrthopedics from './pages/ms/MSOrthopedics';
+import MSENTOtolaryngology from './pages/ms/MSENTOtolaryngology';
+import MSObstetricsGynecology from './pages/ms/MSObstetricsGynecology';
+import MSNeurosurgery from './pages/ms/MSNeurosurgery';
+import MSPlasticSurgery from './pages/ms/MSPlasticSurgery';
+
 // Admin pages
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminLayout from './components/admin/AdminLayout';
