@@ -3,6 +3,7 @@ import MSCoursesHero from '@/components/pg/MSCoursesHero';
 import MSSpecializations from '@/components/pg/MSSpecializations';
 import MSEligibility from '@/components/pg/MSEligibility';
 import MSCareerProspects from '@/components/pg/MSCareerProspects';
+import MSSidebar from '@/components/ms/MSSidebar';
 import CTA from '@/components/CTA';
 import SEO from '@/components/SEO';
 
@@ -18,9 +19,14 @@ const MSCourses = () => {
       />
       
       <MSCoursesHero />
-      <MSSpecializations />
-      <MSEligibility />
-      <MSCareerProspects />
+      <div className="container-custom flex gap-8 py-8">
+        <div className="flex-1">
+          <MSSpecializations />
+          <MSEligibility />
+          <MSCareerProspects />
+        </div>
+        <MSSidebar />
+      </div>
       <CTA />
     </div>
   );

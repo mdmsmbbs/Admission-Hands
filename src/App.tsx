@@ -209,6 +209,54 @@ function App() {
             }
           />
           <Route
+            path="/pg-medical/ms-courses/general-surgery"
+            element={
+              <StandardLayout>
+                <MSGeneralSurgery />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/ms-courses/orthopedics"
+            element={
+              <StandardLayout>
+                <MSOrthopedics />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/ms-courses/ent"
+            element={
+              <StandardLayout>
+                <MSENTOtolaryngology />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/ms-courses/obstetrics-gynecology"
+            element={
+              <StandardLayout>
+                <MSObstetricsGynecology />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/ms-courses/neurosurgery"
+            element={
+              <StandardLayout>
+                <MSNeurosurgery />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/ms-courses/plastic-surgery"
+            element={
+              <StandardLayout>
+                <MSPlasticSurgery />
+              </StandardLayout>
+            }
+          />
+          <Route
             path="/pg-medical/colleges"
             element={
               <StandardLayout>
