@@ -193,9 +193,9 @@ const MDMSComparison = () => {
                     <td className="py-3 text-center text-gray-700">Surgeon, Specialist, Consultant</td>
                   </tr>
                   <tr>
-                    <td className="py-3 font-medium text-gray-900">Earning Potential</td>
-                    <td className="py-3 text-center text-gray-700">₹8-25 LPA</td>
-                    <td className="py-3 text-center text-gray-700">₹10-30 LPA</td>
+                    <td className="py-3 font-medium text-gray-900">Duration</td>
+                    <td className="py-3 text-center text-gray-700">3 Years</td>
+                    <td className="py-3 text-center text-gray-700">3 Years</td>
                   </tr>
                 </tbody>
               </table>

@@ -135,14 +135,10 @@ const TopSpecializations = () => {
                       </div>
                     </div>
                     
-                    <div className="grid grid-cols-3 gap-4 text-sm">
+                    <div className="grid grid-cols-2 gap-4 text-sm">
                       <div>
                         <div className="text-gray-500">Duration</div>
                         <div className="font-medium text-gray-900">{spec.duration}</div>
-                      </div>
-                      <div>
-                        <div className="text-gray-500">Avg Salary</div>
-                        <div className="font-medium text-gray-900">{spec.avgSalary}</div>
                       </div>
                       <div>
                         <div className="text-gray-500">Available Seats</div>
@@ -186,14 +182,10 @@ const TopSpecializations = () => {
                       </div>
                     </div>
                     
-                    <div className="grid grid-cols-3 gap-4 text-sm">
+                    <div className="grid grid-cols-2 gap-4 text-sm">
                       <div>
                         <div className="text-gray-500">Duration</div>
                         <div className="font-medium text-gray-900">{spec.duration}</div>
-                      </div>
-                      <div>
-                        <div className="text-gray-500">Avg Salary</div>
-                        <div className="font-medium text-gray-900">{spec.avgSalary}</div>
                       </div>
                       <div>
                         <div className="text-gray-500">Available Seats</div>
@@ -207,41 +199,6 @@ const TopSpecializations = () => {
           </motion.div>
         </div>
 
-        {/* Statistics Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-16"
-        >
-          <Card className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-center mb-8">PG Medical Education Statistics</h3>
-              <div className="grid md:grid-cols-4 gap-6 text-center">
-                <div>
-                  <Users className="w-8 h-8 mx-auto mb-2 opacity-80" />
-                  <div className="text-3xl font-bold">80+</div>
-                  <div className="text-sm opacity-80">Specializations Available</div>
-                </div>
-                <div>
-                  <Award className="w-8 h-8 mx-auto mb-2 opacity-80" />
-                  <div className="text-3xl font-bold">15,000+</div>
-                  <div className="text-sm opacity-80">PG Seats Annually</div>
-                </div>
-                <div>
-                  <TrendingUp className="w-8 h-8 mx-auto mb-2 opacity-80" />
-                  <div className="text-3xl font-bold">25%</div>
-                  <div className="text-sm opacity-80">Annual Growth Rate</div>
-                </div>
-                <div>
-                  <Star className="w-8 h-8 mx-auto mb-2 opacity-80" />
-                  <div className="text-3xl font-bold">95%</div>
-                  <div className="text-sm opacity-80">Employment Rate</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </motion.div>
       </div>
     </section>
   );
