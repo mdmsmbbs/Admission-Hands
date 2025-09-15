@@ -47,7 +47,7 @@ const PGMedicalHero = () => {
                   Medical Career
                 </span>
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              <p className="text-xl text-foreground/90 leading-relaxed font-medium">
                 Your Trusted Partner for NEET PG (MD/MS) Admissions in India. Secure your postgraduate medical seat with our comprehensive counseling and admission services.
               </p>
             </div>
