@@ -51,52 +51,80 @@ const AdmissionProcess = () => {
     }
   ];
 
-  const seatCategories = [
+  const admissionRoadmap = [
     {
-      title: "General/Merit Seats",
-      description: "Seats allocated purely based on NEET PG rank through counseling",
-      percentage: "50%",
-      eligibility: "NEET PG qualified candidates",
-      process: "All India & State Counseling",
+      title: "NEET PG Exam",
+      icon: BookOpen,
       color: "from-blue-500 to-blue-600",
-      icon: Award,
-      details: [
-        "All India Quota: 50% seats in govt colleges",
-        "State Quota: 85% seats reserved for domicile",
-        "Merit-based allocation through counseling",
-        "Most affordable option for students"
+      points: [
+        "Conducted by the National Board of Examinations (NBE) once a year",
+        "Eligibility includes MBBS degree with internship completion and registration with NMC or State Medical Council",
+        "Foreign medical graduates must clear FMGE and be registered with NMC",
+        "No age or attempt limits for NEET PG"
       ]
     },
     {
-      title: "Management Quota Seats", 
-      description: "Private college seats with relaxed eligibility criteria",
-      percentage: "35%",
-      eligibility: "MBBS + Internship completion",
-      process: "Direct college application",
-      color: "from-purple-500 to-purple-600",
-      icon: Users,
-      details: [
-        "Available in private medical colleges",
-        "Higher fees compared to merit seats",
-        "NEET PG score may be required but lower cutoff",
-        "Faster admission process"
-      ]
-    },
-    {
-      title: "NRI/NRI Sponsored Seats",
-      description: "Reserved seats for NRI students and NRI sponsored Indian students",
-      percentage: "15%",
-      eligibility: "NRI status or NRI sponsorship",
-      process: "College-specific criteria",
-      color: "from-indigo-500 to-indigo-600", 
+      title: "Result and Merit List",
       icon: Target,
-      details: [
-        "Reserved for Non-Resident Indians",
-        "NRI sponsored seats for Indian students",
-        "Higher fee structure in foreign currency",
-        "Separate application process for each college"
+      color: "from-green-500 to-green-600",
+      points: [
+        "Result declared by NBE, used to prepare merit list and rank for counseling and seat allocation"
+      ]
+    },
+    {
+      title: "Counseling Process",
+      icon: Users,
+      color: "from-purple-500 to-purple-600",
+      points: [
+        "Conducted by MCC for All India Quota (50% seats), deemed central universities, and certain institutes",
+        "State authorities conduct counseling for the remaining 50% state quota seats",
+        "Registration, choice filling, seat allotment, document verification, and reporting are key steps",
+        "Multiple rounds are conducted to fill seats optimally"
       ]
     }
+  ];
+
+  const seatTypes = [
+    {
+      type: "General Seats",
+      description: "Regular seats under All India Quota or State Quota for candidates qualifying NEET PG",
+      quota: "50% All India Quota, 50% State Quota",
+      eligibility: "Candidates must qualify NEET PG and meet eligibility like MBBS degree, internship, registration",
+      color: "from-blue-500 to-blue-600"
+    },
+    {
+      type: "Management Quota",
+      description: "Reserved seats in private or deemed universities with higher fee structure",
+      quota: "Varies, typically 15-30% in private colleges",
+      eligibility: "Fees are generally on the higher side compared to general seats; limited seats with NEET qualification requirement",
+      color: "from-purple-500 to-purple-600"
+    },
+    {
+      type: "NRI Quota",
+      description: "Reserved seats for Non-Resident Indians or sponsored candidates in private/deemed universities",
+      quota: "Up to 15% in private/deemed colleges",
+      eligibility: "Fees under NRI quota are usually higher than management quota; candidates must have valid NRI status and qualify NEET PG",
+      color: "from-indigo-500 to-indigo-600"
+    }
+  ];
+
+  const eligibilityCriteria = [
+    "Must hold an MBBS degree from a recognized medical college",
+    "Completion of one-year internship is mandatory before admission",
+    "Must have provisional or permanent registration with NMC or State Medical Council",
+    "Foreign medical graduates must have passed FMGE and obtained NMC registration",
+    "No age restriction or limit on number of attempts",
+    "NRI quota candidates must have valid NRI/OCI/PIO status or proof of parent's NRI status"
+  ];
+
+  const admissionProcessSteps = [
+    "Register and appear for NEET PG examination",
+    "Check result and rank",
+    "Register for counseling through MCC or respective state counseling portals",
+    "Fill and lock choices for colleges and specialization",
+    "Seat allotment based on merit and seat availability",
+    "Complete document verification and pay fees as applicable",
+    "Report to the allotted institute for confirmation of admission"
   ];
 
   return (
@@ -160,7 +188,7 @@ const AdmissionProcess = () => {
           </div>
         </motion.div>
 
-        {/* Seat Categories */}
+        {/* NEET PG MD/MS Admission Roadmap */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -168,55 +196,118 @@ const AdmissionProcess = () => {
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">
-            Understanding Seat Categories
+            NEET PG MD/MS Admission Roadmap
           </h3>
           
-          <div className="grid lg:grid-cols-3 gap-8">
-            {seatCategories.map((category, index) => (
+          <div className="grid lg:grid-cols-3 gap-8 mb-12">
+            {admissionRoadmap.map((item, index) => (
               <motion.div
-                key={category.title}
+                key={item.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className={`h-full bg-gradient-to-br ${category.color} text-white`}>
-                  <CardContent className="p-8">
+                <Card className={`h-full bg-gradient-to-br ${item.color} text-white`}>
+                  <CardContent className="p-6">
                     <div className="text-center mb-6">
                       <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <category.icon className="w-8 h-8 text-white" />
+                        <item.icon className="w-8 h-8 text-white" />
                       </div>
-                      <Badge className="bg-white/20 text-white mb-4">{category.percentage} of Seats</Badge>
-                      <h3 className="text-2xl font-bold mb-2">{category.title}</h3>
-                      <p className="opacity-90 text-sm">{category.description}</p>
+                      <h3 className="text-xl font-bold mb-4">{item.title}</h3>
                     </div>
                     
-                    <div className="space-y-4 mb-6">
-                      <div>
-                        <div className="text-sm opacity-80">Eligibility</div>
-                        <div className="font-medium">{category.eligibility}</div>
-                      </div>
-                      <div>
-                        <div className="text-sm opacity-80">Process</div>
-                        <div className="font-medium">{category.process}</div>
-                      </div>
-                    </div>
-
-                    <div className="bg-white/10 rounded-lg p-4">
-                      <h4 className="font-semibold mb-3 text-sm">Key Features:</h4>
-                      <ul className="space-y-1 text-xs">
-                        {category.details.map((detail, idx) => (
-                          <li key={idx} className="flex items-start">
-                            <span className="w-1 h-1 bg-white rounded-full mt-2 mr-2 flex-shrink-0"></span>
-                            {detail}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    <ul className="space-y-3 text-sm">
+                      {item.points.map((point, idx) => (
+                        <li key={idx} className="flex items-start">
+                          <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
                   </CardContent>
                 </Card>
               </motion.div>
             ))}
+          </div>
+
+          {/* Types of Seats and Quotas */}
+          <div className="mb-12">
+            <h4 className="text-2xl font-bold text-center text-gray-900 mb-8">Types of Seats and Quotas</h4>
+            <div className="overflow-x-auto">
+              <div className="grid gap-6">
+                {seatTypes.map((seat, index) => (
+                  <motion.div
+                    key={seat.type}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    <Card className="bg-white shadow-lg">
+                      <CardContent className="p-6">
+                        <div className="flex items-start space-x-4">
+                          <div className={`w-4 h-16 bg-gradient-to-b ${seat.color} rounded-full flex-shrink-0`}></div>
+                          <div className="flex-1">
+                            <h5 className="text-lg font-bold text-gray-900 mb-2">{seat.type}</h5>
+                            <p className="text-gray-600 mb-3">{seat.description}</p>
+                            <div className="grid md:grid-cols-2 gap-4 text-sm">
+                              <div>
+                                <span className="font-semibold text-gray-700">Quota: </span>
+                                <span className="text-gray-600">{seat.quota}</span>
+                              </div>
+                              <div>
+                                <span className="font-semibold text-gray-700">Eligibility/Notes: </span>
+                                <span className="text-gray-600">{seat.eligibility}</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Eligibility Summary & Admission Process */}
+          <div className="grid lg:grid-cols-2 gap-8">
+            <Card className="bg-white shadow-lg">
+              <CardContent className="p-6">
+                <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                  <CheckCircle className="w-6 h-6 mr-2 text-green-600" />
+                  Eligibility Summary
+                </h4>
+                <ul className="space-y-3">
+                  {eligibilityCriteria.map((criteria, idx) => (
+                    <li key={idx} className="flex items-start text-sm text-gray-600">
+                      <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      {criteria}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white shadow-lg">
+              <CardContent className="p-6">
+                <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                  <GraduationCap className="w-6 h-6 mr-2 text-blue-600" />
+                  Admission Process Summary
+                </h4>
+                <ol className="space-y-3">
+                  {admissionProcessSteps.map((step, idx) => (
+                    <li key={idx} className="flex items-start text-sm text-gray-600">
+                      <span className="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0">
+                        {idx + 1}
+                      </span>
+                      {step}
+                    </li>
+                  ))}
+                </ol>
+              </CardContent>
+            </Card>
           </div>
         </motion.div>
 
