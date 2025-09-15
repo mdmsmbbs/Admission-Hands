@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Heart, Clock, GraduationCap, Building, Award, TrendingUp, CheckCircle, HelpCircle } from 'lucide-react';
+import { Heart, Clock, GraduationCap, Building, Award, TrendingUp, CheckCircle, HelpCircle, Stethoscope, Target, Users } from 'lucide-react';
 import SEO from '@/components/SEO';
 import MDSidebar from '@/components/md/MDSidebar';
 import CTA from '@/components/CTA';
@@ -25,69 +25,63 @@ const MDGeneralMedicine: React.FC = () => {
         <div className="flex gap-8">
           <div className="flex-1">
             {/* Hero Section */}
-            <motion.header
-              className="mb-12"
+            <motion.div
+              className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-8 mb-8 border border-border"
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 bg-red-100 rounded-lg">
-                  <Heart className="h-8 w-8 text-red-500" />
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 bg-primary/10 rounded-xl">
+                  <Heart className="h-8 w-8 text-primary" />
                 </div>
                 <div>
-                  <h1 className="text-4xl font-bold text-foreground">MD General Medicine</h1>
-                  <p className="text-muted-foreground">Internal Medicine Specialization</p>
+                  <h1 className="text-4xl font-bold text-foreground mb-2">
+                    MD General Medicine
+                  </h1>
+                  <p className="text-xl text-muted-foreground">
+                    Master comprehensive patient care and clinical excellence
+                  </p>
                 </div>
               </div>
-              
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-4xl">
-                MD General Medicine is the cornerstone of adult internal medicine, preparing physicians to diagnose, treat, and manage a comprehensive range of acute and chronic diseases affecting internal organs and systems in adult patients.
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                MD General Medicine, also known as Internal Medicine, is the foundation of clinical practice focusing on comprehensive adult patient care. This specialty covers the prevention, diagnosis, and treatment of adult diseases, making it one of the most versatile and essential medical specializations.
               </p>
-            </motion.header>
+            </motion.div>
 
-            {/* Overview Section */}
+            {/* Specialty Overview */}
             <motion.section
-              className="mb-12 card-elegant p-8"
+              className="mb-12"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              variants={fadeInUp}
             >
-              <h2 className="text-2xl font-semibold text-primary mb-6">Branch Overview & Significance</h2>
-              <div className="space-y-4 text-muted-foreground">
-                <p>
-                  General Medicine forms the foundation of clinical practice, encompassing the prevention, diagnosis, and treatment of adult diseases. It's often called Internal Medicine and serves as the gateway to numerous super-specializations.
-                </p>
-                <p>
-                  This specialization focuses on evidence-based medicine, clinical reasoning, and comprehensive patient care. General Medicine physicians are trained to handle complex medical conditions, manage comorbidities, and provide holistic healthcare.
-                </p>
-                <div className="bg-primary/5 p-6 rounded-lg border-l-4 border-primary">
-                  <h3 className="font-semibold text-foreground mb-2">Key Focus Areas:</h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Cardiovascular diseases</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Respiratory disorders</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Endocrine and metabolic conditions</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Gastrointestinal diseases</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Infectious diseases</span>
-                    </li>
+              <motion.h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3" variants={fadeInUp}>
+                <Stethoscope className="h-8 w-8 text-primary" />
+                Specialty Overview
+              </motion.h2>
+              <motion.div className="grid md:grid-cols-2 gap-6">
+                <motion.div className="bg-card rounded-xl p-6 border border-border" variants={fadeInUp}>
+                  <h3 className="text-xl font-semibold text-foreground mb-4">Key Focus Areas</h3>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li>• Cardiovascular diseases</li>
+                    <li>• Respiratory disorders</li>
+                    <li>• Endocrine conditions</li>
+                    <li>• Gastrointestinal diseases</li>
+                    <li>• Infectious diseases</li>
                   </ul>
-                </div>
-              </div>
+                </motion.div>
+                <motion.div className="bg-card rounded-xl p-6 border border-border" variants={fadeInUp}>
+                  <h3 className="text-xl font-semibold text-foreground mb-4">Clinical Competencies</h3>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li>• Patient assessment and diagnosis</li>
+                    <li>• Treatment planning and management</li>
+                    <li>• Critical care medicine</li>
+                    <li>• Emergency medicine skills</li>
+                    <li>• Research and evidence-based practice</li>
+                  </ul>
+                </motion.div>
+              </motion.div>
             </motion.section>
 
             {/* Career Opportunities */}

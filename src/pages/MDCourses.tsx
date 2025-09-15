@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Heart, Baby, X, Syringe, Brain, Wind, Ambulance, Microscope, Bug, Pill, Search, Home, CircleDot, Zap, Activity, Dna } from "lucide-react";
+import { ArrowRight, Heart, Baby, X, Syringe, Brain, Wind, Ambulance, Microscope, Bug, Pill, Search, Home, CircleDot, Zap, Activity, Dna, GraduationCap, Stethoscope, Target } from "lucide-react";
 import CTA from '@/components/CTA';
 import SEO from '@/components/SEO';
 import MDSidebar from '@/components/md/MDSidebar';
@@ -173,47 +173,85 @@ const MDCourses: React.FC = () => {
         <div className="flex gap-8">
           {/* Main Content */}
           <div className="flex-1">
-            {/* Header Section */}
-            <motion.header
-              className="mb-12 text-center"
+            {/* Hero Section */}
+            <motion.div
+              className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-8 mb-8 border border-border"
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
             >
-              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/20 px-4 py-2 rounded-full font-medium mb-6">
-                <Heart className="h-4 w-4" />
-                Doctor of Medicine Programs
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 bg-primary/10 rounded-xl">
+                  <GraduationCap className="h-8 w-8 text-primary" />
+                </div>
+                <div>
+                  <h1 className="text-4xl font-bold text-foreground mb-2">
+                    MD Courses
+                  </h1>
+                  <p className="text-xl text-muted-foreground">
+                    Explore specialized medical fields and advance your career
+                  </p>
+                </div>
               </div>
-              
-              <h1 className="text-4xl font-extrabold mb-6 text-foreground">
-                Doctor of Medicine (MD) Specializations in India
-              </h1>
-              <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-                Unlock your path to expertise in non-surgical clinical medicine with MD degrees — a gateway
-                to diagnosing, managing, and healing a broad spectrum of diseases. Explore diverse specializations tailored to your passion and career goals.
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Doctor of Medicine (MD) is a postgraduate medical degree that provides specialized training in various medical fields. These programs combine advanced clinical training, research, and academic excellence to prepare medical professionals for specialized practice and leadership roles in healthcare.
               </p>
-            </motion.header>
+            </motion.div>
 
-            {/* Explore MD Specializations */}
-            <section className="mb-16">
-              <motion.h2
-                className="text-3xl font-semibold text-primary mb-8 text-center"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeInUp}
-              >
-                Explore the Spectrum of MD Specializations
+            {/* Overview Section */}
+            <motion.section
+              className="mb-12"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <motion.h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3" variants={fadeInUp}>
+                <Stethoscope className="h-8 w-8 text-primary" />
+                Program Overview
               </motion.h2>
+              <motion.div className="grid md:grid-cols-2 gap-6">
+                <motion.div className="bg-card rounded-xl p-6 border border-border" variants={fadeInUp}>
+                  <h3 className="text-xl font-semibold text-foreground mb-4">Program Structure</h3>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li>• 3-year postgraduate specialization</li>
+                    <li>• Advanced clinical training and practice</li>
+                    <li>• Research and thesis requirements</li>
+                    <li>• Subspecialty rotation opportunities</li>
+                    <li>• Academic and teaching components</li>
+                  </ul>
+                </motion.div>
+                <motion.div className="bg-card rounded-xl p-6 border border-border" variants={fadeInUp}>
+                  <h3 className="text-xl font-semibold text-foreground mb-4">Career Benefits</h3>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li>• Specialized medical expertise</li>
+                    <li>• Higher earning potential</li>
+                    <li>• Leadership opportunities in healthcare</li>
+                    <li>• Research and academic career paths</li>
+                    <li>• International practice opportunities</li>
+                  </ul>
+                </motion.div>
+              </motion.div>
+            </motion.section>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* MD Specializations */}
+            <motion.section
+              className="mb-12"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <motion.h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3" variants={fadeInUp}>
+                <Target className="h-8 w-8 text-primary" />
+                MD Specializations
+              </motion.h2>
+              <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {mdSpecializations.map((specialization, index) => {
                   const IconComponent = specialization.icon;
                   
                   return (
-                    <motion.article
+                    <motion.div
                       key={specialization.id}
-                      className="group card-elegant p-4 hover:shadow-[var(--shadow-medium)] transition-all duration-300 hover:-translate-y-1"
+                      className="bg-card rounded-xl p-6 border border-border hover:shadow-lg transition-all duration-300"
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true }}
@@ -226,33 +264,23 @@ const MDCourses: React.FC = () => {
                         },
                       }}
                     >
-                        <div className="flex items-start gap-3">
-                         <div className={`flex-shrink-0 p-2 rounded-lg bg-muted/50 ${specialization.color}`}>
-                           <IconComponent className="h-5 w-5" />
-                         </div>
-                         
-                         <div className="flex-1">
-                           <h3 className="text-lg font-semibold mb-2 text-foreground group-hover:text-primary transition-colors">
-                             {specialization.title}
-                           </h3>
-                           <p className="text-muted-foreground mb-3 leading-relaxed text-sm">
-                             {specialization.description}
-                           </p>
-                          
-                          <Link
-                            to={specialization.path}
-                            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors group/link"
-                          >
-                            Learn More
-                            <ArrowRight className="h-4 w-4 transition-transform group-hover/link:translate-x-1" />
-                          </Link>
+                      <Link to={specialization.path} className="block">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="p-3 bg-primary/10 rounded-xl">
+                            <IconComponent className="h-6 w-6 text-primary" />
+                          </div>
+                          <h3 className="text-xl font-semibold text-foreground">{specialization.title}</h3>
                         </div>
-                      </div>
-                    </motion.article>
+                        <p className="text-muted-foreground mb-4">{specialization.description}</p>
+                        <div className="flex items-center text-primary font-medium">
+                          Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                        </div>
+                      </Link>
+                    </motion.div>
                   );
                 })}
-              </div>
-            </section>
+              </motion.div>
+            </motion.section>
 
             {/* Additional Information Sections */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">

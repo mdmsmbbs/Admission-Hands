@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Baby, Clock, GraduationCap, Building, Award, TrendingUp, CheckCircle, HelpCircle } from 'lucide-react';
+import { Baby, Clock, GraduationCap, Building, Award, TrendingUp, CheckCircle, HelpCircle, Stethoscope, Target, Users } from 'lucide-react';
 import SEO from '@/components/SEO';
 import MDSidebar from '@/components/md/MDSidebar';
 import CTA from '@/components/CTA';
@@ -25,26 +25,29 @@ const MDPediatrics: React.FC = () => {
         <div className="flex gap-8">
           <div className="flex-1">
             {/* Hero Section */}
-            <motion.header
-              className="mb-12"
+            <motion.div
+              className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-8 mb-8 border border-border"
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 bg-pink-100 rounded-lg">
-                  <Baby className="h-8 w-8 text-pink-500" />
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 bg-primary/10 rounded-xl">
+                  <Baby className="h-8 w-8 text-primary" />
                 </div>
                 <div>
-                  <h1 className="text-4xl font-bold text-foreground">MD Pediatrics</h1>
-                  <p className="text-muted-foreground">Child Healthcare Specialization</p>
+                  <h1 className="text-4xl font-bold text-foreground mb-2">
+                    MD Pediatrics
+                  </h1>
+                  <p className="text-xl text-muted-foreground">
+                    Dedicated to children's health and development
+                  </p>
                 </div>
               </div>
-              
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-4xl">
-                MD Pediatrics is dedicated to the comprehensive healthcare of infants, children, and adolescents. This specialization focuses on the physical, mental, and social health of children from birth through young adulthood.
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                MD Pediatrics is dedicated to the comprehensive healthcare of infants, children, and adolescents. This specialization focuses on the physical, mental, and social health of children from birth through young adulthood, requiring specialized knowledge as children have unique physiological and developmental needs.
               </p>
-            </motion.header>
+            </motion.div>
 
             {/* Overview Section */}
             <motion.section

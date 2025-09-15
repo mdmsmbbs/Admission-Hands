@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
-import { Home, Users, TrendingUp, Shield, Heart, Activity, Globe, BookOpen } from 'lucide-react';
+import { Home, Users, TrendingUp, Shield, Heart, Activity, Globe, BookOpen, Stethoscope, Target } from 'lucide-react';
 import MDSidebar from '@/components/md/MDSidebar';
 import CTA from '@/components/CTA';
 
@@ -37,23 +37,29 @@ const MDCommunityMedicine: React.FC = () => {
           {/* Main Content */}
           <div className="flex-1">
             {/* Hero Section */}
-            <motion.section
-              className="mb-12"
+            <motion.div
+              className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-8 mb-8 border border-border"
               initial="hidden"
               animate="visible"
-              variants={staggerContainer}
+              variants={fadeInUp}
             >
-              <motion.div className="text-center mb-8" variants={fadeInUp}>
-                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/20 px-4 py-2 rounded-full font-medium mb-6">
-                  <Home className="h-4 w-4" />
-                  Public Health Specialization
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 bg-primary/10 rounded-xl">
+                  <Home className="h-8 w-8 text-primary" />
                 </div>
-                <h1 className="text-4xl font-bold text-foreground">MD Community Medicine</h1>
-                <p className="text-xl text-muted-foreground mt-4 max-w-3xl mx-auto">
-                  Lead disease prevention and public health improvement through epidemiology and health education
-                </p>
-              </motion.div>
-            </motion.section>
+                <div>
+                  <h1 className="text-4xl font-bold text-foreground mb-2">
+                    MD Community Medicine
+                  </h1>
+                  <p className="text-xl text-muted-foreground">
+                    Lead disease prevention and public health improvement
+                  </p>
+                </div>
+              </div>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Community Medicine, also known as Preventive and Social Medicine, focuses on health promotion, disease prevention, and improving health outcomes at the population level. This specialty bridges clinical medicine with public health policy.
+              </p>
+            </motion.div>
 
             {/* Specialty Overview */}
             <motion.section
