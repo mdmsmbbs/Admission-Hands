@@ -2,18 +2,30 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { GraduationCap, Stethoscope, Users, Award } from 'lucide-react';
+import { GraduationCap, Stethoscope, Users, Award, Shield, UserCheck, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const PGMedicalHero = () => {
   return (
-    <section className="relative py-20 overflow-hidden bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50">
+    <section className="relative py-20 overflow-hidden">
+      {/* Background with logo */}
+      <div 
+        className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5"
+        style={{
+          backgroundImage: `url('/lovable-uploads/73cbc20f-2ca7-4a59-b80b-d2bd8ca71846.png')`,
+          backgroundSize: 'contain',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          opacity: 0.1
+        }}
+      />
+
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-20 h-20 bg-purple-200 rounded-full"></div>
-        <div className="absolute top-1/3 right-10 w-16 h-16 bg-indigo-200 rounded-full"></div>
-        <div className="absolute bottom-10 left-1/4 w-12 h-12 bg-blue-200 rounded-full"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-14 h-14 bg-purple-200 rounded-full"></div>
+        <div className="absolute top-10 left-10 w-20 h-20 bg-primary/20 rounded-full"></div>
+        <div className="absolute top-1/3 right-10 w-16 h-16 bg-secondary/20 rounded-full"></div>
+        <div className="absolute bottom-10 left-1/4 w-12 h-12 bg-accent/20 rounded-full"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-14 h-14 bg-primary/20 rounded-full"></div>
       </div>
 
       <div className="container-custom relative z-10">
@@ -25,42 +37,42 @@ const PGMedicalHero = () => {
             className="space-y-8"
           >
             <div className="space-y-4">
-              <Badge variant="outline" className="bg-purple-100 text-purple-700 border-purple-300">
-                Postgraduate Medical Education
+              <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20">
+                Admission Hands
               </Badge>
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                 Advance Your
-                <span className="block bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                   Medical Career
                 </span>
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed">
-                Expert guidance for MD and MS admissions in India. Secure your postgraduate medical seat with our comprehensive counseling and admission services.
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                Your Trusted Partner for NEET PG (MD/MS) Admissions in India. Secure your postgraduate medical seat with our comprehensive counseling and admission services.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <div className="flex items-center space-x-3 p-4 bg-white rounded-lg shadow-sm">
-                <GraduationCap className="w-8 h-8 text-purple-600" />
+              <div className="flex items-center space-x-3 p-4 bg-background/80 backdrop-blur-sm rounded-lg shadow-sm border">
+                <GraduationCap className="w-8 h-8 text-primary" />
                 <div>
-                  <div className="font-semibold text-gray-900">MD Programs</div>
-                  <div className="text-sm text-gray-500">50+ Specializations</div>
+                  <div className="font-semibold text-foreground">MD Programs</div>
+                  <div className="text-sm text-muted-foreground">50+ Specializations</div>
                 </div>
               </div>
-              <div className="flex items-center space-x-3 p-4 bg-white rounded-lg shadow-sm">
-                <Stethoscope className="w-8 h-8 text-indigo-600" />
+              <div className="flex items-center space-x-3 p-4 bg-background/80 backdrop-blur-sm rounded-lg shadow-sm border">
+                <Stethoscope className="w-8 h-8 text-secondary" />
                 <div>
-                  <div className="font-semibold text-gray-900">MS Programs</div>
-                  <div className="text-sm text-gray-500">30+ Specializations</div>
+                  <div className="font-semibold text-foreground">MS Programs</div>
+                  <div className="text-sm text-muted-foreground">30+ Specializations</div>
                 </div>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
+              <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90">
                 Explore PG Courses
               </Button>
-              <Button variant="outline" size="lg" className="border-purple-300 text-purple-700 hover:bg-purple-50">
+              <Button variant="outline" size="lg" className="border-primary/20 text-primary hover:bg-primary/10">
                 Admission Process
               </Button>
             </div>
@@ -72,52 +84,60 @@ const PGMedicalHero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:pl-8"
           >
-            <Card className="bg-white/80 backdrop-blur-sm shadow-2xl border-0">
+            <Card className="bg-background/90 backdrop-blur-sm shadow-2xl border">
               <CardContent className="p-8">
                 <div className="space-y-6">
                   <div className="text-center">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Why Choose PG Medical?</h3>
-                    <p className="text-gray-600">Transform your medical career with specialized expertise</p>
+                    <h3 className="text-2xl font-bold text-foreground mb-2">Why Choose Admission Hands?</h3>
+                    <p className="text-muted-foreground">Your trusted partner for NEET PG admissions</p>
                   </div>
                   
                   <div className="space-y-4">
                     <div className="flex items-start space-x-3">
-                      <Award className="w-6 h-6 text-purple-600 mt-1" />
+                      <CheckCircle className="w-6 h-6 text-primary mt-1" />
                       <div>
-                        <h4 className="font-semibold text-gray-900">Specialized Expertise</h4>
-                        <p className="text-sm text-gray-600">Gain deep knowledge in your chosen medical specialty</p>
+                        <h4 className="font-semibold text-foreground">Comprehensive Guidance</h4>
+                        <p className="text-sm text-muted-foreground">Complete support for government, private, and deemed universities</p>
                       </div>
                     </div>
                     
                     <div className="flex items-start space-x-3">
-                      <Users className="w-6 h-6 text-indigo-600 mt-1" />
+                      <Shield className="w-6 h-6 text-secondary mt-1" />
                       <div>
-                        <h4 className="font-semibold text-gray-900">Career Advancement</h4>
-                        <p className="text-sm text-gray-600">Open doors to senior positions and consulting roles</p>
+                        <h4 className="font-semibold text-foreground">Transparent Information</h4>
+                        <p className="text-sm text-muted-foreground">Accurate details on fees, seats, and admission procedures</p>
                       </div>
                     </div>
                     
                     <div className="flex items-start space-x-3">
-                      <GraduationCap className="w-6 h-6 text-purple-600 mt-1" />
+                      <UserCheck className="w-6 h-6 text-accent mt-1" />
                       <div>
-                        <h4 className="font-semibold text-gray-900">Research Opportunities</h4>
-                        <p className="text-sm text-gray-600">Contribute to medical research and innovation</p>
+                        <h4 className="font-semibold text-foreground">Personalized Advice</h4>
+                        <p className="text-sm text-muted-foreground">Based on your rank, specialization, and budget</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-3">
+                      <Award className="w-6 h-6 text-primary mt-1" />
+                      <div>
+                        <h4 className="font-semibold text-foreground">Expert Assistance</h4>
+                        <p className="text-sm text-muted-foreground">Management quota and NRI quota admissions</p>
                       </div>
                     </div>
                   </div>
                   
                   <div className="grid grid-cols-3 gap-4 pt-4 border-t">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-purple-600">500+</div>
-                      <div className="text-xs text-gray-500">PG Seats Secured</div>
+                      <div className="text-2xl font-bold text-primary">500+</div>
+                      <div className="text-xs text-muted-foreground">PG Seats Secured</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-indigo-600">95%</div>
-                      <div className="text-xs text-gray-500">Success Rate</div>
+                      <div className="text-2xl font-bold text-secondary">95%</div>
+                      <div className="text-xs text-muted-foreground">Success Rate</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-purple-600">100+</div>
-                      <div className="text-xs text-gray-500">Partner Colleges</div>
+                      <div className="text-2xl font-bold text-accent">100+</div>
+                      <div className="text-xs text-muted-foreground">Partner Colleges</div>
                     </div>
                   </div>
                 </div>

@@ -1,8 +1,7 @@
 import React from 'react';
 import PGMedicalHero from '@/components/pg/PGMedicalHero';
 import PGMedicalOverview from '@/components/pg/PGMedicalOverview';
-import MDMSComparison from '@/components/pg/MDMSComparison';
-import TopSpecializations from '@/components/pg/TopSpecializations';
+import PGOverview from '@/components/pg/PGOverview';
 import AdmissionProcess from '@/components/pg/AdmissionProcess';
 import CTA from '@/components/CTA';
 import SEO from '@/components/SEO';
@@ -36,8 +35,7 @@ const PGMedical = () => {
       
       <PGMedicalHero />
       <PGMedicalOverview />
-      <MDMSComparison />
-      <TopSpecializations />
+      <PGOverview />
       <AdmissionProcess />
       <CTA />
     </div>
