@@ -195,14 +195,6 @@ const MobileMenu = ({ isOpen, onToggle, isActive, isMBBSIndiaRoute = false }: Mo
                         <div className="text-xs text-gray-500 mt-0.5">Master of Surgery Specializations</div>
                       </Link>
                       
-                      <Link 
-                        to="/pg-medical/admission-process"
-                        className="block p-3 text-[15px] bg-white hover:bg-gray-50 rounded-md transition-all transform hover:-translate-y-1 hover:shadow-sm text-gray-700 hover:border-l-2 hover:border-purple-300"
-                        onClick={onToggle}
-                      >
-                        <div className="font-medium">Admission Process</div>
-                        <div className="text-xs text-gray-500 mt-0.5">NEET PG & Direct Admission</div>
-                      </Link>
                       
                       <Link 
                         to="/pg-medical/colleges"

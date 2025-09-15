@@ -179,17 +179,6 @@ const DesktopNavigation = ({ isActive, location, isMBBSIndiaRoute = false }: Des
                     </div>
                   </Link>
                   
-                  <Link
-                    to="/pg-medical/admission-process"
-                    className="flex items-center p-3 rounded-md mb-2 transition-all transform hover:-translate-y-1 hover:shadow-md bg-indigo-50 hover:bg-indigo-100 border-l-4 border-indigo-500"
-                  >
-                    <div>
-                      <div className="text-sm font-medium text-gray-900">Admission Process</div>
-                      <p className="text-xs text-gray-500 mt-0.5">
-                        NEET PG & Direct Admission
-                      </p>
-                    </div>
-                  </Link>
                   
                   <Link
                     to="/pg-medical/colleges"

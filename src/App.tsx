@@ -189,14 +189,6 @@ function App() {
             }
           />
           <Route
-            path="/pg-medical/admission-process"
-            element={
-              <StandardLayout>
-                <PGAdmissionProcess />
-              </StandardLayout>
-            }
-          />
-          <Route
             path="/pg-medical/colleges"
             element={
               <StandardLayout>
