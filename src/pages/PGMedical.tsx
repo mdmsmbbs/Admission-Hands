@@ -1,7 +1,7 @@
 import React from 'react';
 import PGMedicalHero from '@/components/pg/PGMedicalHero';
 import PGMedicalOverview from '@/components/pg/PGMedicalOverview';
-import PGOverview from '@/components/pg/PGOverview';
+
 import AdmissionProcess from '@/components/pg/AdmissionProcess';
 import CTA from '@/components/CTA';
 import SEO from '@/components/SEO';
@@ -35,7 +35,7 @@ const PGMedical = () => {
       
       <PGMedicalHero />
       <PGMedicalOverview />
-      <PGOverview />
+      
       <AdmissionProcess />
       <CTA />
     </div>
