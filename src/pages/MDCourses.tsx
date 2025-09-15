@@ -244,14 +244,14 @@ const MDCourses: React.FC = () => {
                 <Target className="h-8 w-8 text-primary" />
                 MD Specializations
               </motion.h2>
-              <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+              <motion.div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-2">
                 {mdSpecializations.map((specialization, index) => {
                   const IconComponent = specialization.icon;
                   
                   return (
                     <motion.div
                       key={specialization.id}
-                      className="bg-card rounded-lg p-3 border border-border hover:shadow-lg transition-all duration-300"
+                      className="bg-gradient-to-br from-card to-card/80 rounded-lg p-2 border border-border/50 hover:shadow-xl hover:border-primary/30 transition-all duration-300 group"
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true }}
@@ -260,20 +260,21 @@ const MDCourses: React.FC = () => {
                         visible: {
                           opacity: 1,
                           y: 0,
-                          transition: { delay: index * 0.05, duration: 0.5, ease: "easeOut" },
+                          transition: { delay: index * 0.02, duration: 0.4, ease: "easeOut" },
                         },
                       }}
+                      whileHover={{ scale: 1.02, y: -2 }}
                     >
-                      <Link to={specialization.path} className="block">
-                        <div className="flex items-center gap-2 mb-2">
-                          <div className="p-2 bg-primary/10 rounded-lg">
-                            <IconComponent className="h-4 w-4 text-primary" />
+                      <Link to={specialization.path} className="block h-full">
+                        <div className="flex flex-col items-center text-center h-full">
+                          <div className="p-2 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg mb-2 group-hover:from-primary/20 group-hover:to-primary/10 transition-colors">
+                            <IconComponent className="h-5 w-5 text-primary" />
                           </div>
-                          <h3 className="text-sm font-semibold text-foreground">{specialization.title}</h3>
-                        </div>
-                        <p className="text-xs text-muted-foreground mb-2 line-clamp-2">{specialization.description}</p>
-                        <div className="flex items-center text-primary font-medium text-xs">
-                          Learn More <ArrowRight className="ml-1 h-3 w-3" />
+                          <h3 className="text-xs font-semibold text-foreground mb-1 leading-tight">{specialization.title}</h3>
+                          <p className="text-[10px] text-muted-foreground mb-2 line-clamp-2 flex-grow">{specialization.description}</p>
+                          <div className="flex items-center text-primary font-medium text-[10px] group-hover:text-primary/80 transition-colors">
+                            Learn More <ArrowRight className="ml-1 h-2 w-2" />
+                          </div>
                         </div>
                       </Link>
                     </motion.div>
@@ -335,39 +336,6 @@ const MDCourses: React.FC = () => {
               </motion.section>
             </div>
 
-            {/* Why Admission Hands Section */}
-            <motion.section
-              className="card-elegant p-6 bg-primary text-primary-foreground"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeInUp}
-            >
-              <h2 className="text-2xl font-semibold mb-4 text-center">
-                Why Admission Hands?
-              </h2>
-              <ul className="space-y-3 text-base max-w-3xl mx-auto">
-                <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-2 h-2 bg-primary-foreground rounded-full mt-2"></div>
-                  <span>Expert counseling to choose the MD specialization matching your passion and future scope.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-2 h-2 bg-primary-foreground rounded-full mt-2"></div>
-                  <span>Comprehensive guidance on seat availability: government, private, management & NRI quotas.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-2 h-2 bg-primary-foreground rounded-full mt-2"></div>
-                  <span>Strategic NEET PG preparation support for maximizing ranks and optimizing seat selection.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-2 h-2 bg-primary-foreground rounded-full mt-2"></div>
-                  <span>Personalized admission assistance to ensure seamless, stress-free success.</span>
-                </li>
-              </ul>
-              <p className="mt-6 text-center font-semibold text-lg">
-                Partner with Admission Hands for your confident journey to becoming a medical specialist!
-              </p>
-            </motion.section>
           </div>
 
           {/* Right Sidebar - Desktop Only */}
