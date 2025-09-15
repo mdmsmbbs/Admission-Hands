@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { GraduationCap, Stethoscope, Users, Award, Shield, UserCheck, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
+import pgNeetHero from '@/assets/pg-neet-hero.jpg';
 
 const PGMedicalHero = () => {
   return (
@@ -12,11 +13,11 @@ const PGMedicalHero = () => {
       <div 
         className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5"
         style={{
-          backgroundImage: `url('/lovable-uploads/73cbc20f-2ca7-4a59-b80b-d2bd8ca71846.png')`,
-          backgroundSize: 'contain',
+          backgroundImage: `url(${pgNeetHero})`,
+          backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
-          opacity: 0.1
+          opacity: 0.6
         }}
       />
 
@@ -123,21 +124,6 @@ const PGMedicalHero = () => {
                         <h4 className="font-semibold text-foreground">Expert Assistance</h4>
                         <p className="text-sm text-muted-foreground">Management quota and NRI quota admissions</p>
                       </div>
-                    </div>
-                  </div>
-                  
-                  <div className="grid grid-cols-3 gap-4 pt-4 border-t">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">500+</div>
-                      <div className="text-xs text-muted-foreground">PG Seats Secured</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-secondary">95%</div>
-                      <div className="text-xs text-muted-foreground">Success Rate</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-accent">100+</div>
-                      <div className="text-xs text-muted-foreground">Partner Colleges</div>
                     </div>
                   </div>
                 </div>

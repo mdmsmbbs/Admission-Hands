@@ -180,6 +180,16 @@ const PGOverview = () => {
                     <td className="py-2 text-center text-muted-foreground text-sm">Surgical Procedures & Operations</td>
                   </tr>
                   <tr className="border-b">
+                    <td className="py-2 font-medium text-foreground text-sm">Training Type</td>
+                    <td className="py-2 text-center text-muted-foreground text-sm">Clinical Practice & Consultation</td>
+                    <td className="py-2 text-center text-muted-foreground text-sm">Hands-on Surgical Training</td>
+                  </tr>
+                  <tr className="border-b">
+                    <td className="py-2 font-medium text-foreground text-sm">Specialization</td>
+                    <td className="py-2 text-center text-muted-foreground text-sm">Research & Evidence-based Medicine</td>
+                    <td className="py-2 text-center text-muted-foreground text-sm">Emergency & Trauma Care</td>
+                  </tr>
+                  <tr className="border-b">
                     <td className="py-2 font-medium text-foreground text-sm">Work Environment</td>
                     <td className="py-2 text-center text-muted-foreground text-sm">Clinics, Hospitals, Research</td>
                     <td className="py-2 text-center text-muted-foreground text-sm">Operation Theaters, Emergency</td>
