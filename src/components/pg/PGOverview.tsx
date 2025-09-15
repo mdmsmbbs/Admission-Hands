@@ -7,17 +7,17 @@ import { motion } from 'framer-motion';
 
 const PGOverview = () => {
   const mdSpecializations = [
-    { name: "General Medicine", seats: "2000+", trend: "high" },
-    { name: "Pediatrics", seats: "1500+", trend: "high" },
-    { name: "Dermatology", seats: "500+", trend: "very-high" },
-    { name: "Radiology", seats: "800+", trend: "high" }
+    { name: "General Medicine", seats: "4000+", trend: "high" },
+    { name: "Pediatrics", seats: "3400+", trend: "high" },
+    { name: "Dermatology", seats: "1400+", trend: "very-high" },
+    { name: "Radiology", seats: "2200+", trend: "high" }
   ];
 
   const msSpecializations = [
-    { name: "General Surgery", seats: "1800+", trend: "high" },
-    { name: "Orthopedics", seats: "1200+", trend: "very-high" },
-    { name: "ENT", seats: "800+", trend: "high" },
-    { name: "Ophthalmology", seats: "600+", trend: "very-high" }
+    { name: "General Surgery", seats: "6400+", trend: "high" },
+    { name: "Orthopedics", seats: "2800+", trend: "very-high" },
+    { name: "ENT", seats: "1300+", trend: "high" },
+    { name: "Ophthalmology", seats: "2100+", trend: "very-high" }
   ];
 
   const getTrendColor = (trend: string) => {
@@ -29,26 +29,26 @@ const PGOverview = () => {
   };
 
   return (
-    <section className="py-16 bg-muted/30">
-      <div className="container-custom">
+    <section className="py-12 bg-muted/30">
+      <div className="container mx-auto px-4">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-8"
         >
           <Badge variant="outline" className="mb-4 bg-primary/10 text-primary border-primary/20">
             MD vs MS Overview
           </Badge>
-          <h2 className="text-4xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl font-bold text-foreground mb-4">
             Choose Your <span className="text-gradient">Medical Path</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Quick comparison of MD and MS programs with top specializations and career prospects.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Comparison of MD and MS programs with specializations and prospects.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
+        <div className="grid lg:grid-cols-2 gap-6 mb-8">
           {/* MD Section */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -56,7 +56,7 @@ const PGOverview = () => {
             viewport={{ once: true }}
           >
             <Card className="h-full bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
-              <CardContent className="p-6">
+              <CardContent className="p-5">
                 <div className="text-center mb-6">
                   <Badge className="bg-primary text-primary-foreground mb-4">Doctor of Medicine</Badge>
                   <h3 className="text-2xl font-bold text-primary">MD Programs</h3>
@@ -109,7 +109,7 @@ const PGOverview = () => {
             viewport={{ once: true }}
           >
             <Card className="h-full bg-gradient-to-br from-secondary/5 to-secondary/10 border-secondary/20">
-              <CardContent className="p-6">
+              <CardContent className="p-5">
                 <div className="text-center mb-6">
                   <Badge className="bg-secondary text-secondary-foreground mb-4">Master of Surgery</Badge>
                   <h3 className="text-2xl font-bold text-secondary">MS Programs</h3>
@@ -156,17 +156,14 @@ const PGOverview = () => {
           </motion.div>
         </div>
 
-        {/* Quick Comparison Table */}
+        {/* Comparison Table */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="bg-background rounded-2xl shadow-lg overflow-hidden"
         >
-          <div className="bg-gradient-to-r from-primary to-secondary text-primary-foreground p-6">
-            <h3 className="text-2xl font-bold text-center">Quick Comparison</h3>
-          </div>
-          <div className="p-6">
+          <div className="p-4">
             <div className="overflow-x-auto">
               <table className="w-full text-left">
                 <thead>
@@ -178,19 +175,19 @@ const PGOverview = () => {
                 </thead>
                 <tbody className="space-y-2">
                   <tr className="border-b">
-                    <td className="py-3 font-medium text-foreground">Focus</td>
-                    <td className="py-3 text-center text-muted-foreground">Medical Diagnosis & Treatment</td>
-                    <td className="py-3 text-center text-muted-foreground">Surgical Procedures & Operations</td>
+                    <td className="py-2 font-medium text-foreground text-sm">Focus</td>
+                    <td className="py-2 text-center text-muted-foreground text-sm">Medical Diagnosis & Treatment</td>
+                    <td className="py-2 text-center text-muted-foreground text-sm">Surgical Procedures & Operations</td>
                   </tr>
                   <tr className="border-b">
-                    <td className="py-3 font-medium text-foreground">Work Environment</td>
-                    <td className="py-3 text-center text-muted-foreground">Clinics, Hospitals, Research</td>
-                    <td className="py-3 text-center text-muted-foreground">Operation Theaters, Emergency</td>
+                    <td className="py-2 font-medium text-foreground text-sm">Work Environment</td>
+                    <td className="py-2 text-center text-muted-foreground text-sm">Clinics, Hospitals, Research</td>
+                    <td className="py-2 text-center text-muted-foreground text-sm">Operation Theaters, Emergency</td>
                   </tr>
                   <tr className="border-b">
-                    <td className="py-3 font-medium text-foreground">Duration</td>
-                    <td className="py-3 text-center text-muted-foreground">3 Years</td>
-                    <td className="py-3 text-center text-muted-foreground">3 Years</td>
+                    <td className="py-2 font-medium text-foreground text-sm">Duration</td>
+                    <td className="py-2 text-center text-muted-foreground text-sm">3 Years</td>
+                    <td className="py-2 text-center text-muted-foreground text-sm">3 Years</td>
                   </tr>
                 </tbody>
               </table>
