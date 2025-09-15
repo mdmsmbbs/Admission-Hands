@@ -16,6 +16,18 @@ import MSCourses from './pages/MSCourses';
 import PGAdmissionProcess from './pages/PGAdmissionProcess';
 import PGColleges from './pages/PGColleges';
 
+// MD Specialization Pages
+import MDGeneralMedicine from './pages/md/MDGeneralMedicine';
+import MDPediatrics from './pages/md/MDPediatrics';
+import MDRadiodiagnosis from './pages/md/MDRadiodiagnosis';
+import MDAnesthesiology from './pages/md/MDAnesthesiology';
+import MDPsychiatry from './pages/md/MDPsychiatry';
+import MDRespiratoryMedicine from './pages/md/MDRespiratoryMedicine';
+import MDEmergencyMedicine from './pages/md/MDEmergencyMedicine';
+import MDPathology from './pages/md/MDPathology';
+import MDMicrobiology from './pages/md/MDMicrobiology';
+import MDPharmacology from './pages/md/MDPharmacology';
+
 // Admin pages
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminLayout from './components/admin/AdminLayout';
@@ -193,6 +205,88 @@ function App() {
             element={
               <StandardLayout>
                 <PGColleges />
+              </StandardLayout>
+            }
+          />
+
+          {/* MD Specialization Routes */}
+          <Route
+            path="/pg-medical/md-courses/general-medicine"
+            element={
+              <StandardLayout>
+                <MDGeneralMedicine />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/md-courses/pediatrics"
+            element={
+              <StandardLayout>
+                <MDPediatrics />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/md-courses/radiodiagnosis"
+            element={
+              <StandardLayout>
+                <MDRadiodiagnosis />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/md-courses/anesthesiology"
+            element={
+              <StandardLayout>
+                <MDAnesthesiology />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/md-courses/psychiatry"
+            element={
+              <StandardLayout>
+                <MDPsychiatry />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/md-courses/respiratory-medicine"
+            element={
+              <StandardLayout>
+                <MDRespiratoryMedicine />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/md-courses/emergency-medicine"
+            element={
+              <StandardLayout>
+                <MDEmergencyMedicine />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/md-courses/pathology"
+            element={
+              <StandardLayout>
+                <MDPathology />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/md-courses/microbiology"
+            element={
+              <StandardLayout>
+                <MDMicrobiology />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/md-courses/pharmacology"
+            element={
+              <StandardLayout>
+                <MDPharmacology />
               </StandardLayout>
             }
           />
