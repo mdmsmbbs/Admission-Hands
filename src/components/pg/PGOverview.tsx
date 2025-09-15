@@ -1,23 +1,54 @@
 import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Brain, Scissors, Clock, BookOpen, Stethoscope, Users, Star, TrendingUp } from 'lucide-react';
+import { Brain, Scissors, Clock, BookOpen, Stethoscope, Users, TrendingUp, MapPin, Activity } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const PGOverview = () => {
-  const mdSpecializations = [
-    { name: "General Medicine", seats: "4000+", trend: "high" },
-    { name: "Pediatrics", seats: "3400+", trend: "high" },
-    { name: "Dermatology", seats: "1400+", trend: "very-high" },
-    { name: "Radiology", seats: "2200+", trend: "high" }
-  ];
-
-  const msSpecializations = [
-    { name: "General Surgery", seats: "6400+", trend: "high" },
-    { name: "Orthopedics", seats: "2800+", trend: "very-high" },
-    { name: "ENT", seats: "1300+", trend: "high" },
-    { name: "Ophthalmology", seats: "2100+", trend: "very-high" }
+  const comparisonData = [
+    {
+      aspect: "Primary Focus",
+      icon: <Stethoscope className="w-5 h-5" />,
+      md: "Medical Diagnosis & Treatment",
+      ms: "Surgical Procedures & Operations"
+    },
+    {
+      aspect: "Training Approach", 
+      icon: <BookOpen className="w-5 h-5" />,
+      md: "Clinical Practice & Research",
+      ms: "Hands-on Surgical Training"
+    },
+    {
+      aspect: "Top Specializations",
+      icon: <Users className="w-5 h-5" />,
+      md: "General Medicine (4000+), Pediatrics (3400+), Dermatology (1400+), Radiology (2200+)",
+      ms: "General Surgery (6400+), Orthopedics (2800+), ENT (1300+), Ophthalmology (2100+)"
+    },
+    {
+      aspect: "Total Available Seats",
+      icon: <TrendingUp className="w-5 h-5" />,
+      md: "11,000+ seats nationwide",
+      ms: "12,600+ seats nationwide"
+    },
+    {
+      aspect: "Career Path",
+      icon: <MapPin className="w-5 h-5" />,
+      md: "Consultation & Evidence-based Care",
+      ms: "Emergency & Trauma Surgery"
+    },
+    {
+      aspect: "Work Environment",
+      icon: <Activity className="w-5 h-5" />,
+      md: "Clinics, Hospitals, Research Centers",
+      ms: "Operation Theaters, Emergency Units"
+    },
+    {
+      aspect: "Program Duration",
+      icon: <Clock className="w-5 h-5" />,
+      md: "3 Years",
+      ms: "3 Years"
+    }
   ];
 
   return (
@@ -36,173 +67,85 @@ const PGOverview = () => {
             MD vs MS <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Programs</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Compare specializations, seats, and career prospects to make the right choice for your medical future.
+            Complete comparison of specializations, seats, and career prospects to make the right choice for your medical future.
           </p>
         </motion.div>
 
-        {/* Combined Overview Card */}
+        {/* Comprehensive Comparison Table */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12"
         >
           <Card className="bg-background/95 backdrop-blur-sm shadow-2xl border-2 border-primary/10 rounded-3xl overflow-hidden">
+            <CardHeader className="bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 p-8">
+              <CardTitle className="text-center">
+                <h3 className="text-3xl font-bold text-foreground mb-3">Complete Program Comparison</h3>
+                <p className="text-muted-foreground text-lg">Everything you need to know about MD and MS programs</p>
+              </CardTitle>
+            </CardHeader>
             <CardContent className="p-0">
-              <div className="grid lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-border/20">
-                {/* MD Section */}
-                <div className="p-8 bg-gradient-to-br from-primary/5 to-primary/10">
-                  <div className="text-center mb-8">
-                    <Badge className="bg-primary text-primary-foreground mb-4 text-lg px-6 py-2">
-                      Doctor of Medicine
-                    </Badge>
-                    <h3 className="text-3xl font-bold text-primary mb-2">MD Programs</h3>
-                    <p className="text-muted-foreground">Medical Specializations</p>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 gap-4 mb-8">
-                    <div className="flex items-center space-x-3 p-3 bg-background/60 rounded-lg">
-                      <Brain className="w-5 h-5 text-primary" />
-                      <span className="text-sm font-medium">Medical Diagnosis & Treatment</span>
-                    </div>
-                    <div className="flex items-center space-x-3 p-3 bg-background/60 rounded-lg">
-                      <Stethoscope className="w-5 h-5 text-primary" />
-                      <span className="text-sm font-medium">Clinical Practice & Research</span>
-                    </div>
-                    <div className="flex items-center space-x-3 p-3 bg-background/60 rounded-lg">
-                      <BookOpen className="w-5 h-5 text-primary" />
-                      <span className="text-sm font-medium">Evidence-based Medicine</span>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-background/80 rounded-xl p-6 mb-6">
-                    <h4 className="font-bold text-foreground mb-4 text-lg">Top Specializations</h4>
-                    <div className="space-y-3">
-                      {mdSpecializations.map((spec, index) => (
-                        <div key={index} className="flex justify-between items-center p-3 bg-background/60 rounded-lg">
-                          <span className="font-medium text-foreground">{spec.name}</span>
-                          <div className="flex items-center space-x-2">
-                            <Badge variant="secondary" className="text-xs bg-primary/10 text-primary">
-                              {spec.seats} seats
-                            </Badge>
-                            <div className="flex items-center">
-                              <TrendingUp className="w-4 h-4 text-green-600" />
-                            </div>
-                          </div>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="bg-gradient-to-r from-primary/5 to-secondary/5 border-b-2 border-primary/20">
+                      <th className="text-left p-6 font-bold text-foreground text-xl w-1/4">
+                        Comparison Aspect
+                      </th>
+                      <th className="text-center p-6 font-bold text-primary text-xl w-3/8">
+                        <div className="flex items-center justify-center gap-3">
+                          <Stethoscope className="h-6 w-6" />
+                          MD (Doctor of Medicine)
                         </div>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <Button className="w-full bg-primary hover:bg-primary/90 text-lg py-6">
-                    Explore MD Courses
-                  </Button>
-                </div>
-
-                {/* MS Section */}
-                <div className="p-8 bg-gradient-to-br from-secondary/5 to-secondary/10">
-                  <div className="text-center mb-8">
-                    <Badge className="bg-secondary text-secondary-foreground mb-4 text-lg px-6 py-2">
-                      Master of Surgery
-                    </Badge>
-                    <h3 className="text-3xl font-bold text-secondary mb-2">MS Programs</h3>
-                    <p className="text-muted-foreground">Surgical Specializations</p>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 gap-4 mb-8">
-                    <div className="flex items-center space-x-3 p-3 bg-background/60 rounded-lg">
-                      <Scissors className="w-5 h-5 text-secondary" />
-                      <span className="text-sm font-medium">Surgical Procedures & Operations</span>
-                    </div>
-                    <div className="flex items-center space-x-3 p-3 bg-background/60 rounded-lg">
-                      <Users className="w-5 h-5 text-secondary" />
-                      <span className="text-sm font-medium">Hands-on Surgical Training</span>
-                    </div>
-                    <div className="flex items-center space-x-3 p-3 bg-background/60 rounded-lg">
-                      <Clock className="w-5 h-5 text-secondary" />
-                      <span className="text-sm font-medium">Emergency & Trauma Care</span>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-background/80 rounded-xl p-6 mb-6">
-                    <h4 className="font-bold text-foreground mb-4 text-lg">Top Specializations</h4>
-                    <div className="space-y-3">
-                      {msSpecializations.map((spec, index) => (
-                        <div key={index} className="flex justify-between items-center p-3 bg-background/60 rounded-lg">
-                          <span className="font-medium text-foreground">{spec.name}</span>
-                          <div className="flex items-center space-x-2">
-                            <Badge variant="secondary" className="text-xs bg-secondary/10 text-secondary">
-                              {spec.seats} seats
-                            </Badge>
-                            <div className="flex items-center">
-                              <TrendingUp className="w-4 h-4 text-green-600" />
-                            </div>
-                          </div>
+                      </th>
+                      <th className="text-center p-6 font-bold text-secondary text-xl w-3/8">
+                        <div className="flex items-center justify-center gap-3">
+                          <Scissors className="h-6 w-6" />
+                          MS (Master of Surgery)
                         </div>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <Button className="w-full bg-secondary hover:bg-secondary/90 text-lg py-6">
-                    Explore MS Courses
-                  </Button>
-                </div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {comparisonData.map((item, index) => (
+                      <tr key={index} className={`border-b border-border/10 hover:bg-muted/20 transition-all duration-200 ${index % 2 === 0 ? 'bg-background' : 'bg-muted/5'}`}>
+                        <td className="p-6 font-semibold text-foreground bg-muted/10 border-r border-border/20">
+                          <div className="flex items-center gap-3">
+                            <div className="text-primary">{item.icon}</div>
+                            {item.aspect}
+                          </div>
+                        </td>
+                        <td className="p-6 text-muted-foreground border-r border-border/10">
+                          <div className="flex items-start justify-center gap-2">
+                            <span className="font-medium text-center leading-relaxed">{item.md}</span>
+                          </div>
+                        </td>
+                        <td className="p-6 text-muted-foreground">
+                          <div className="flex items-start justify-center gap-2">
+                            <span className="font-medium text-center leading-relaxed">{item.ms}</span>
+                          </div>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </CardContent>
-          </Card>
-        </motion.div>
-
-        {/* Enhanced Comparison Table */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-background/95 backdrop-blur-sm rounded-3xl shadow-2xl border-2 border-primary/10 overflow-hidden"
-        >
-          <div className="bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 p-6 text-center">
-            <h3 className="text-2xl font-bold text-foreground mb-2">Quick Comparison</h3>
-            <p className="text-muted-foreground">Key differences between MD and MS programs</p>
-          </div>
-          <div className="p-8">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b-2 border-primary/20">
-                    <th className="pb-4 text-left text-foreground font-bold text-lg">Comparison Aspect</th>
-                    <th className="pb-4 text-center text-primary font-bold text-lg">MD (Doctor of Medicine)</th>
-                    <th className="pb-4 text-center text-secondary font-bold text-lg">MS (Master of Surgery)</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-border/10">
-                  <tr className="hover:bg-muted/20 transition-colors">
-                    <td className="py-4 font-semibold text-foreground">Primary Focus</td>
-                    <td className="py-4 text-center text-muted-foreground">Medical Diagnosis & Treatment</td>
-                    <td className="py-4 text-center text-muted-foreground">Surgical Procedures & Operations</td>
-                  </tr>
-                  <tr className="hover:bg-muted/20 transition-colors">
-                    <td className="py-4 font-semibold text-foreground">Training Approach</td>
-                    <td className="py-4 text-center text-muted-foreground">Clinical Practice & Research</td>
-                    <td className="py-4 text-center text-muted-foreground">Hands-on Surgical Training</td>
-                  </tr>
-                  <tr className="hover:bg-muted/20 transition-colors">
-                    <td className="py-4 font-semibold text-foreground">Career Path</td>
-                    <td className="py-4 text-center text-muted-foreground">Consultation & Evidence-based Care</td>
-                    <td className="py-4 text-center text-muted-foreground">Emergency & Trauma Surgery</td>
-                  </tr>
-                  <tr className="hover:bg-muted/20 transition-colors">
-                    <td className="py-4 font-semibold text-foreground">Work Environment</td>
-                    <td className="py-4 text-center text-muted-foreground">Clinics, Hospitals, Research Centers</td>
-                    <td className="py-4 text-center text-muted-foreground">Operation Theaters, Emergency Units</td>
-                  </tr>
-                  <tr className="hover:bg-muted/20 transition-colors">
-                    <td className="py-4 font-semibold text-foreground">Program Duration</td>
-                    <td className="py-4 text-center text-muted-foreground">3 Years</td>
-                    <td className="py-4 text-center text-muted-foreground">3 Years</td>
-                  </tr>
-                </tbody>
-              </table>
+            
+            {/* Action Buttons */}
+            <div className="bg-muted/5 p-8 border-t border-border/20">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all">
+                  <Stethoscope className="h-5 w-5 mr-2" />
+                  Explore MD Courses
+                </Button>
+                <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all">
+                  <Scissors className="h-5 w-5 mr-2" />
+                  Explore MS Courses
+                </Button>
+              </div>
             </div>
-          </div>
+          </Card>
         </motion.div>
       </div>
     </section>
