@@ -36,13 +36,13 @@ const MDCommunityMedicine: React.FC = () => {
         <div className="flex gap-8">
           {/* Main Content */}
           <div className="flex-1">
-            {/* Hero Section */}
-            <motion.div
-              className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-8 mb-8 border border-border"
-              initial="hidden"
-              animate="visible"
-              variants={fadeInUp}
-            >
+              {/* Hero Section */}
+              <motion.div
+                className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-6 mb-6 border border-border"
+                initial="hidden"
+                animate="visible"
+                variants={fadeInUp}
+              >
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 bg-primary/10 rounded-xl">
                   <Home className="h-8 w-8 text-primary" />

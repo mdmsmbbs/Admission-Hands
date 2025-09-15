@@ -26,12 +26,12 @@ const MDGeneralMedicine: React.FC = () => {
           <div className="flex-1">
             {/* Hero Section */}
             <motion.div
-              className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-8 mb-8 border border-border"
+              className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-6 mb-6 border border-border"
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
             >
-              <div className="flex items-center gap-4 mb-6">
+              <div className="flex items-center gap-4 mb-4">
                 <div className="p-3 bg-primary/10 rounded-xl">
                   <Heart className="h-8 w-8 text-primary" />
                 </div>
@@ -51,19 +51,19 @@ const MDGeneralMedicine: React.FC = () => {
 
             {/* Specialty Overview */}
             <motion.section
-              className="mb-12"
+              className="mb-8"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <motion.h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3" variants={fadeInUp}>
+              <motion.h2 className="text-3xl font-bold text-foreground mb-4 flex items-center gap-3" variants={fadeInUp}>
                 <Stethoscope className="h-8 w-8 text-primary" />
                 Specialty Overview
               </motion.h2>
-              <motion.div className="grid md:grid-cols-2 gap-6">
-                <motion.div className="bg-card rounded-xl p-6 border border-border" variants={fadeInUp}>
-                  <h3 className="text-xl font-semibold text-foreground mb-4">Key Focus Areas</h3>
-                  <ul className="space-y-3 text-muted-foreground">
+              <motion.div className="grid md:grid-cols-2 gap-4">
+                <motion.div className="bg-card rounded-xl p-4 border border-border" variants={fadeInUp}>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">Key Focus Areas</h3>
+                  <ul className="space-y-2 text-muted-foreground">
                     <li>• Cardiovascular diseases</li>
                     <li>• Respiratory disorders</li>
                     <li>• Endocrine conditions</li>
@@ -71,9 +71,9 @@ const MDGeneralMedicine: React.FC = () => {
                     <li>• Infectious diseases</li>
                   </ul>
                 </motion.div>
-                <motion.div className="bg-card rounded-xl p-6 border border-border" variants={fadeInUp}>
-                  <h3 className="text-xl font-semibold text-foreground mb-4">Clinical Competencies</h3>
-                  <ul className="space-y-3 text-muted-foreground">
+                <motion.div className="bg-card rounded-xl p-4 border border-border" variants={fadeInUp}>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">Clinical Competencies</h3>
+                  <ul className="space-y-2 text-muted-foreground">
                     <li>• Patient assessment and diagnosis</li>
                     <li>• Treatment planning and management</li>
                     <li>• Critical care medicine</li>
@@ -86,82 +86,112 @@ const MDGeneralMedicine: React.FC = () => {
 
             {/* Career Opportunities */}
             <motion.section
-              className="mb-12 card-elegant p-8"
+              className="mb-8 card-elegant p-6"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInUp}
             >
-              <h2 className="text-2xl font-semibold text-primary mb-6">Career Opportunities & Healthcare Roles</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-4">
+              <h2 className="text-2xl font-semibold text-primary mb-4">Career Opportunities & Healthcare Roles</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-3">
                   <h3 className="font-semibold text-foreground">Clinical Practice</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>• Consultant Physician in hospitals</li>
-                    <li>• Private practice as Internal Medicine specialist</li>
-                    <li>• Emergency medicine physician</li>
-                    <li>• ICU/Critical care specialist</li>
-                    <li>• Hospitalist in tertiary care centers</li>
+                  <ul className="space-y-1 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span>Consultant Physician in hospitals</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span>Private practice as Internal Medicine specialist</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span>Emergency medicine physician</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span>ICU/Critical care specialist</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span>Hospitalist in tertiary care centers</span>
+                    </li>
                   </ul>
                 </div>
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <h3 className="font-semibold text-foreground">Academic & Research</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>• Medical college faculty</li>
-                    <li>• Clinical research coordinator</li>
-                    <li>• Medical writing and journalism</li>
-                    <li>• Healthcare administration</li>
-                    <li>• Pharmaceutical industry roles</li>
+                  <ul className="space-y-1 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span>Medical college faculty</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span>Clinical research coordinator</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span>Medical writing and journalism</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span>Healthcare administration</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span>Pharmaceutical industry roles</span>
+                    </li>
                   </ul>
                 </div>
               </div>
             </motion.section>
 
             {/* Eligibility & Course Structure */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
               <motion.section
-                className="card-elegant p-8"
+                className="card-elegant p-6"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeInUp}
               >
-                <div className="flex items-center gap-2 mb-6">
+                <div className="flex items-center gap-2 mb-4">
                   <GraduationCap className="h-6 w-6 text-primary" />
                   <h2 className="text-2xl font-semibold text-primary">Eligibility Criteria</h2>
                 </div>
-                <ul className="space-y-3 text-muted-foreground">
+                <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 mt-1" />
+                    <CheckCircle className="h-4 w-4 text-green-500 mt-1 flex-shrink-0" />
                     <span>MBBS degree from recognized medical college</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 mt-1" />
+                    <CheckCircle className="h-4 w-4 text-green-500 mt-1 flex-shrink-0" />
                     <span>Completed mandatory rotating internship</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 mt-1" />
+                    <CheckCircle className="h-4 w-4 text-green-500 mt-1 flex-shrink-0" />
                     <span>Valid NEET PG score</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 mt-1" />
+                    <CheckCircle className="h-4 w-4 text-green-500 mt-1 flex-shrink-0" />
                     <span>Registration with Medical Council of India/State</span>
                   </li>
                 </ul>
               </motion.section>
 
               <motion.section
-                className="card-elegant p-8"
+                className="card-elegant p-6"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeInUp}
               >
-                <div className="flex items-center gap-2 mb-6">
+                <div className="flex items-center gap-2 mb-4">
                   <Clock className="h-6 w-6 text-primary" />
                   <h2 className="text-2xl font-semibold text-primary">Course Structure</h2>
                 </div>
-                <div className="space-y-4 text-muted-foreground">
+                <div className="space-y-3 text-muted-foreground">
                   <div>
                     <h3 className="font-semibold text-foreground">Duration: 3 Years</h3>
                     <p className="text-sm">Intensive clinical and theoretical training</p>
@@ -180,20 +210,20 @@ const MDGeneralMedicine: React.FC = () => {
 
             {/* Top Colleges */}
             <motion.section
-              className="mb-12 card-elegant p-8"
+              className="mb-8 card-elegant p-6"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInUp}
             >
-              <div className="flex items-center gap-2 mb-6">
+              <div className="flex items-center gap-2 mb-4">
                 <Building className="h-6 w-6 text-primary" />
                 <h2 className="text-2xl font-semibold text-primary">Top Indian Colleges for MD General Medicine</h2>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <h3 className="font-semibold text-foreground mb-4">Government Colleges</h3>
-                  <ul className="space-y-2 text-muted-foreground">
+                  <h3 className="font-semibold text-foreground mb-3">Government Colleges</h3>
+                  <ul className="space-y-1 text-muted-foreground">
                     <li>• AIIMS, New Delhi</li>
                     <li>• PGIMER, Chandigarh</li>
                     <li>• JIPMER, Puducherry</li>
@@ -203,8 +233,8 @@ const MDGeneralMedicine: React.FC = () => {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-4">Private Colleges</h3>
-                  <ul className="space-y-2 text-muted-foreground">
+                  <h3 className="font-semibold text-foreground mb-3">Private Colleges</h3>
+                  <ul className="space-y-1 text-muted-foreground">
                     <li>• Christian Medical College, Vellore</li>
                     <li>• St. John's Medical College, Bangalore</li>
                     <li>• Kasturba Medical College, Manipal</li>
@@ -218,27 +248,27 @@ const MDGeneralMedicine: React.FC = () => {
 
             {/* Super-specializations */}
             <motion.section
-              className="mb-12 card-elegant p-8"
+              className="mb-6 card-elegant p-6"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInUp}
             >
-              <div className="flex items-center gap-2 mb-6">
+              <div className="flex items-center gap-2 mb-4">
                 <Award className="h-6 w-6 text-primary" />
                 <h2 className="text-2xl font-semibold text-primary">Super-specialization Options</h2>
               </div>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-muted-foreground mb-4">
                 After completing MD General Medicine, you can pursue DM (Doctorate of Medicine) in various super-specialties:
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {[
                   'Cardiology', 'Gastroenterology', 'Nephrology', 'Neurology', 
                   'Endocrinology', 'Rheumatology', 'Oncology', 'Infectious Diseases',
                   'Critical Care Medicine'
                 ].map((specialty, index) => (
-                  <div key={index} className="bg-muted/50 p-3 rounded-lg text-center">
-                    <span className="font-medium text-foreground">{specialty}</span>
+                  <div key={index} className="bg-muted/50 p-2 rounded-lg text-center">
+                    <span className="font-medium text-foreground text-sm">{specialty}</span>
                   </div>
                 ))}
               </div>
@@ -246,17 +276,17 @@ const MDGeneralMedicine: React.FC = () => {
 
             {/* Emerging Trends */}
             <motion.section
-              className="mb-12 card-elegant p-8"
+              className="mb-6 card-elegant p-6"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInUp}
             >
-              <div className="flex items-center gap-2 mb-6">
+              <div className="flex items-center gap-2 mb-4">
                 <TrendingUp className="h-6 w-6 text-primary" />
                 <h2 className="text-2xl font-semibold text-primary">Emerging Trends</h2>
               </div>
-              <div className="space-y-4 text-muted-foreground">
+              <div className="space-y-3 text-muted-foreground">
                 <div>
                   <h3 className="font-semibold text-foreground">Telemedicine & Digital Health</h3>
                   <p>Integration of AI-powered diagnostic tools and remote patient monitoring systems.</p>
@@ -274,17 +304,17 @@ const MDGeneralMedicine: React.FC = () => {
 
             {/* FAQs */}
             <motion.section
-              className="mb-12 card-elegant p-8"
+              className="mb-8 card-elegant p-6"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInUp}
             >
-              <div className="flex items-center gap-2 mb-6">
+              <div className="flex items-center gap-2 mb-4">
                 <HelpCircle className="h-6 w-6 text-primary" />
                 <h2 className="text-2xl font-semibold text-primary">Frequently Asked Questions</h2>
               </div>
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">What is the scope after MD General Medicine?</h3>
                   <p className="text-muted-foreground">MD General Medicine offers broad career opportunities including clinical practice, teaching, research, and further super-specialization. It's one of the most versatile medical specialties.</p>

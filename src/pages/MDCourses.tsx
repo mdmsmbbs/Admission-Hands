@@ -175,12 +175,12 @@ const MDCourses: React.FC = () => {
           <div className="flex-1">
             {/* Hero Section */}
             <motion.div
-              className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-8 mb-8 border border-border"
+              className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-6 mb-6 border border-border"
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
             >
-              <div className="flex items-center gap-4 mb-6">
+              <div className="flex items-center gap-4 mb-4">
                 <div className="p-3 bg-primary/10 rounded-xl">
                   <GraduationCap className="h-8 w-8 text-primary" />
                 </div>
@@ -200,19 +200,19 @@ const MDCourses: React.FC = () => {
 
             {/* Overview Section */}
             <motion.section
-              className="mb-12"
+              className="mb-8"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <motion.h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3" variants={fadeInUp}>
+              <motion.h2 className="text-3xl font-bold text-foreground mb-4 flex items-center gap-3" variants={fadeInUp}>
                 <Stethoscope className="h-8 w-8 text-primary" />
                 Program Overview
               </motion.h2>
-              <motion.div className="grid md:grid-cols-2 gap-6">
-                <motion.div className="bg-card rounded-xl p-6 border border-border" variants={fadeInUp}>
-                  <h3 className="text-xl font-semibold text-foreground mb-4">Program Structure</h3>
-                  <ul className="space-y-3 text-muted-foreground">
+              <motion.div className="grid md:grid-cols-2 gap-4">
+                <motion.div className="bg-card rounded-xl p-4 border border-border" variants={fadeInUp}>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">Program Structure</h3>
+                  <ul className="space-y-2 text-muted-foreground">
                     <li>• 3-year postgraduate specialization</li>
                     <li>• Advanced clinical training and practice</li>
                     <li>• Research and thesis requirements</li>
@@ -220,11 +220,11 @@ const MDCourses: React.FC = () => {
                     <li>• Academic and teaching components</li>
                   </ul>
                 </motion.div>
-                <motion.div className="bg-card rounded-xl p-6 border border-border" variants={fadeInUp}>
-                  <h3 className="text-xl font-semibold text-foreground mb-4">Career Benefits</h3>
-                  <ul className="space-y-3 text-muted-foreground">
+                <motion.div className="bg-card rounded-xl p-4 border border-border" variants={fadeInUp}>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">Career Benefits</h3>
+                  <ul className="space-y-2 text-muted-foreground">
                     <li>• Specialized medical expertise</li>
-                    <li>• Higher earning potential</li>
+                    <li>• Competitive salary packages</li>
                     <li>• Leadership opportunities in healthcare</li>
                     <li>• Research and academic career paths</li>
                     <li>• International practice opportunities</li>
@@ -235,23 +235,23 @@ const MDCourses: React.FC = () => {
 
             {/* MD Specializations */}
             <motion.section
-              className="mb-12"
+              className="mb-8"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <motion.h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3" variants={fadeInUp}>
+              <motion.h2 className="text-3xl font-bold text-foreground mb-4 flex items-center gap-3" variants={fadeInUp}>
                 <Target className="h-8 w-8 text-primary" />
                 MD Specializations
               </motion.h2>
-              <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
                 {mdSpecializations.map((specialization, index) => {
                   const IconComponent = specialization.icon;
                   
                   return (
                     <motion.div
                       key={specialization.id}
-                      className="bg-card rounded-xl p-6 border border-border hover:shadow-lg transition-all duration-300"
+                      className="bg-card rounded-lg p-3 border border-border hover:shadow-lg transition-all duration-300"
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true }}
@@ -265,15 +265,15 @@ const MDCourses: React.FC = () => {
                       }}
                     >
                       <Link to={specialization.path} className="block">
-                        <div className="flex items-center gap-3 mb-4">
-                          <div className="p-3 bg-primary/10 rounded-xl">
-                            <IconComponent className="h-6 w-6 text-primary" />
+                        <div className="flex items-center gap-2 mb-2">
+                          <div className="p-2 bg-primary/10 rounded-lg">
+                            <IconComponent className="h-4 w-4 text-primary" />
                           </div>
-                          <h3 className="text-xl font-semibold text-foreground">{specialization.title}</h3>
+                          <h3 className="text-sm font-semibold text-foreground">{specialization.title}</h3>
                         </div>
-                        <p className="text-muted-foreground mb-4">{specialization.description}</p>
-                        <div className="flex items-center text-primary font-medium">
-                          Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                        <p className="text-xs text-muted-foreground mb-2 line-clamp-2">{specialization.description}</p>
+                        <div className="flex items-center text-primary font-medium text-xs">
+                          Learn More <ArrowRight className="ml-1 h-3 w-3" />
                         </div>
                       </Link>
                     </motion.div>
@@ -283,17 +283,17 @@ const MDCourses: React.FC = () => {
             </motion.section>
 
             {/* Additional Information Sections */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
               {/* Admission Process Section */}
               <motion.section
-                className="card-elegant p-8"
+                className="card-elegant p-6"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeInUp}
               >
-                <h2 className="text-2xl font-semibold text-primary mb-6">Admission Process for MD in India</h2>
-                <div className="space-y-4 text-muted-foreground">
+                <h2 className="text-2xl font-semibold text-primary mb-4">Admission Process for MD in India</h2>
+                <div className="space-y-3 text-muted-foreground">
                   <p>
                     To pursue MD, candidates must have completed an MBBS degree along with a mandatory internship.
                     Admission selection is through NEET PG, India's premier national-level entrance exam for postgraduate medical courses.
@@ -301,7 +301,7 @@ const MDCourses: React.FC = () => {
                   <p>
                     The MD program typically spans 3 rigorous years combining theoretical learning, clinical exposure, and research.
                   </p>
-                  <div className="bg-muted/50 p-4 rounded-lg">
+                  <div className="bg-muted/50 p-3 rounded-lg">
                     <p className="text-sm">
                       <strong className="text-foreground">Note on Fees:</strong> Government colleges offer affordable fees, private colleges charge moderate fees,
                       while management and NRI quota seats come with higher fee structures.
@@ -312,14 +312,14 @@ const MDCourses: React.FC = () => {
 
               {/* Why Choose MD Section */}
               <motion.section
-                className="card-elegant p-8"
+                className="card-elegant p-6"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeInUp}
               >
-                <h2 className="text-2xl font-semibold text-primary mb-6">Why Choose MD?</h2>
-                <div className="space-y-4 text-muted-foreground">
+                <h2 className="text-2xl font-semibold text-primary mb-4">Why Choose MD?</h2>
+                <div className="space-y-3 text-muted-foreground">
                   <p>
                     MD opens doors to rewarding medical careers in hospitals, research institutes, teaching, and private practice.
                     Graduates can advance further with DM super-specializations or fellowship programs.
@@ -327,7 +327,7 @@ const MDCourses: React.FC = () => {
                   <p>
                     With healthcare's increasing complexity and specialization, MD degrees have strong demand both in India and abroad.
                   </p>
-                  <div className="flex items-center gap-2 mt-6">
+                  <div className="flex items-center gap-2 mt-4">
                     <Dna className="h-5 w-5 text-primary" />
                     <span className="font-medium text-foreground">Advanced medical expertise</span>
                   </div>
@@ -337,16 +337,16 @@ const MDCourses: React.FC = () => {
 
             {/* Why Admission Hands Section */}
             <motion.section
-              className="card-elegant p-8 bg-primary text-primary-foreground"
+              className="card-elegant p-6 bg-primary text-primary-foreground"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInUp}
             >
-              <h2 className="text-3xl font-semibold mb-6 text-center">
+              <h2 className="text-2xl font-semibold mb-4 text-center">
                 Why Admission Hands?
               </h2>
-              <ul className="space-y-4 text-lg max-w-3xl mx-auto">
+              <ul className="space-y-3 text-base max-w-3xl mx-auto">
                 <li className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-2 h-2 bg-primary-foreground rounded-full mt-2"></div>
                   <span>Expert counseling to choose the MD specialization matching your passion and future scope.</span>
@@ -364,7 +364,7 @@ const MDCourses: React.FC = () => {
                   <span>Personalized admission assistance to ensure seamless, stress-free success.</span>
                 </li>
               </ul>
-              <p className="mt-8 text-center font-semibold text-xl">
+              <p className="mt-6 text-center font-semibold text-lg">
                 Partner with Admission Hands for your confident journey to becoming a medical specialist!
               </p>
             </motion.section>
