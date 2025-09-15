@@ -169,7 +169,7 @@ const MDCourses: React.FC = () => {
         ogDescription="Comprehensive guide to MD courses and specializations in India."
       />
       
-      <main className="container-custom py-8">
+      <main className="container-custom py-8 pt-24">
         <div className="flex gap-8">
           {/* Main Content */}
           <div className="flex-1">
@@ -206,14 +206,14 @@ const MDCourses: React.FC = () => {
                 Explore the Spectrum of MD Specializations
               </motion.h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {mdSpecializations.map((specialization, index) => {
                   const IconComponent = specialization.icon;
                   
                   return (
                     <motion.article
                       key={specialization.id}
-                      className="group card-elegant p-6 hover:shadow-[var(--shadow-medium)] transition-all duration-300 hover:-translate-y-1"
+                      className="group card-elegant p-4 hover:shadow-[var(--shadow-medium)] transition-all duration-300 hover:-translate-y-1"
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true }}
@@ -226,18 +226,18 @@ const MDCourses: React.FC = () => {
                         },
                       }}
                     >
-                      <div className="flex items-start gap-4">
-                        <div className={`flex-shrink-0 p-3 rounded-lg bg-muted/50 ${specialization.color}`}>
-                          <IconComponent className="h-6 w-6" />
-                        </div>
-                        
-                        <div className="flex-1">
-                          <h3 className="text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
-                            {specialization.title}
-                          </h3>
-                          <p className="text-muted-foreground mb-4 leading-relaxed">
-                            {specialization.description}
-                          </p>
+                        <div className="flex items-start gap-3">
+                         <div className={`flex-shrink-0 p-2 rounded-lg bg-muted/50 ${specialization.color}`}>
+                           <IconComponent className="h-5 w-5" />
+                         </div>
+                         
+                         <div className="flex-1">
+                           <h3 className="text-lg font-semibold mb-2 text-foreground group-hover:text-primary transition-colors">
+                             {specialization.title}
+                           </h3>
+                           <p className="text-muted-foreground mb-3 leading-relaxed text-sm">
+                             {specialization.description}
+                           </p>
                           
                           <Link
                             to={specialization.path}

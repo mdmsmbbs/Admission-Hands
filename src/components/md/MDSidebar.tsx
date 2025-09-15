@@ -49,20 +49,6 @@ const MDSidebar: React.FC<MDSidebarProps> = ({ className }) => {
       </div>
       
       <nav className="space-y-2">
-        <Link
-          to="/pg-medical/md-courses"
-          className={cn(
-            "flex items-center justify-between p-3 rounded-md transition-colors group",
-            currentPath === '/pg-medical/md-courses'
-              ? "bg-primary text-primary-foreground"
-              : "hover:bg-muted text-muted-foreground hover:text-foreground"
-          )}
-        >
-          <span className="font-medium">Overview</span>
-          {currentPath === '/pg-medical/md-courses' && (
-            <ChevronRight className="h-4 w-4" />
-          )}
-        </Link>
         
         {mdSpecializations.map((specialization, index) => (
           <motion.div

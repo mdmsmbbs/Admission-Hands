@@ -27,6 +27,14 @@ import MDEmergencyMedicine from './pages/md/MDEmergencyMedicine';
 import MDPathology from './pages/md/MDPathology';
 import MDMicrobiology from './pages/md/MDMicrobiology';
 import MDPharmacology from './pages/md/MDPharmacology';
+import MDForensicMedicine from './pages/md/MDForensicMedicine';
+import MDCommunityMedicine from './pages/md/MDCommunityMedicine';
+import MDImmunohematology from './pages/md/MDImmunohematology';
+import MDNuclearMedicine from './pages/md/MDNuclearMedicine';
+import MDGeriatrics from './pages/md/MDGeriatrics';
+import MDSportsMedicine from './pages/md/MDSportsMedicine';
+import MDDermatology from './pages/md/MDDermatology';
+import MDFamilyMedicine from './pages/md/MDFamilyMedicine';
 
 // Admin pages
 import AdminLogin from './pages/admin/AdminLogin';
@@ -287,6 +295,70 @@ function App() {
             element={
               <StandardLayout>
                 <MDPharmacology />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/md-courses/forensic-medicine"
+            element={
+              <StandardLayout>
+                <MDForensicMedicine />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/md-courses/community-medicine"
+            element={
+              <StandardLayout>
+                <MDCommunityMedicine />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/md-courses/immunohematology"
+            element={
+              <StandardLayout>
+                <MDImmunohematology />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/md-courses/nuclear-medicine"
+            element={
+              <StandardLayout>
+                <MDNuclearMedicine />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/md-courses/geriatrics"
+            element={
+              <StandardLayout>
+                <MDGeriatrics />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/md-courses/sports-medicine"
+            element={
+              <StandardLayout>
+                <MDSportsMedicine />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/md-courses/dermatology"
+            element={
+              <StandardLayout>
+                <MDDermatology />
+              </StandardLayout>
+            }
+          />
+          <Route
+            path="/pg-medical/md-courses/family-medicine"
+            element={
+              <StandardLayout>
+                <MDFamilyMedicine />
               </StandardLayout>
             }
           />
