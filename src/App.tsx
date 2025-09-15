@@ -43,6 +43,12 @@ import MSENTOtolaryngology from './pages/ms/MSENTOtolaryngology';
 import MSObstetricsGynecology from './pages/ms/MSObstetricsGynecology';
 import MSNeurosurgery from './pages/ms/MSNeurosurgery';
 import MSPlasticSurgery from './pages/ms/MSPlasticSurgery';
+import MSOpthalmology from './pages/ms/MSOpthalmology';
+import MSUrology from './pages/ms/MSUrology';
+import MSCardiothoracicSurgery from './pages/ms/MSCardiothoracicSurgery';
+import MSPediatricSurgery from './pages/ms/MSPediatricSurgery';
+import MSSurgicalOncology from './pages/ms/MSSurgicalOncology';
+import MSTraumaSurgery from './pages/ms/MSTraumaSurgery';
 
 // Admin pages
 import AdminLogin from './pages/admin/AdminLogin';
