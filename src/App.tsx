@@ -47,7 +47,7 @@ import LiveAlerts from './components/LiveAlerts';
 import './App.css';
 
 // Standard layout wrapper for public pages
-const StandardLayout = ({ children }) => (
+const StandardLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <div className="w-full">
     <Header />
     <LiveAlerts />
