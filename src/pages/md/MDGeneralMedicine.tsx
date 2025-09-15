@@ -291,7 +291,7 @@ const MDGeneralMedicine: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">Is MD General Medicine difficult to clear in NEET PG?</h3>
-                  <p className="text-muted-foreground">MD General Medicine is moderately competitive with good seat availability across India. A rank within top 20,000-25,000 in NEET PG typically secures admission in government colleges.</p>
+                  <p className="text-muted-foreground">MD General Medicine is competitive but generally accessible in government colleges, with most seats allocated to candidates securing NEET PG ranks within the top 7,500. Many reputed government colleges admit students with ranks well below 5,000, making admission feasible for candidates in this rank range under All India and State quotas.</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">What's the difference between MD General Medicine and other MD branches?</h3>

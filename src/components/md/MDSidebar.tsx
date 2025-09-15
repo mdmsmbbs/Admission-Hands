@@ -39,14 +39,23 @@ const MDSidebar: React.FC<MDSidebarProps> = ({ className }) => {
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6 }}
       className={cn(
-        "sticky top-24 h-fit bg-card border border-border rounded-lg shadow-[var(--shadow-soft)] p-6 min-w-[280px]",
+        "sticky top-24 h-fit bg-gradient-to-br from-card to-card/80 border border-border/50 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm p-6 min-w-[280px]",
         className
       )}
     >
-      <div className="flex items-center gap-2 mb-6">
-        <Stethoscope className="h-5 w-5 text-primary" />
-        <h3 className="font-semibold text-lg text-foreground">MD Specializations</h3>
-      </div>
+      <motion.div 
+        className="flex items-center gap-3 mb-6 pb-4 border-b border-border/30"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
+      >
+        <div className="p-2 bg-primary/10 rounded-lg">
+          <Stethoscope className="h-5 w-5 text-primary" />
+        </div>
+        <h3 className="font-semibold text-lg text-foreground bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+          MD Specializations
+        </h3>
+      </motion.div>
       
       <nav className="space-y-2">
         
@@ -60,17 +69,38 @@ const MDSidebar: React.FC<MDSidebarProps> = ({ className }) => {
             <Link
               to={specialization.path}
               className={cn(
-                "flex items-center justify-between p-3 rounded-md transition-colors group",
+                "flex items-center justify-between p-3 rounded-lg transition-all duration-300 group relative overflow-hidden",
                 currentPath === specialization.path
-                  ? "bg-primary text-primary-foreground"
-                  : "hover:bg-muted text-muted-foreground hover:text-foreground"
+                  ? "bg-gradient-to-r from-primary to-primary/80 text-primary-foreground shadow-lg transform scale-[1.02]"
+                  : "hover:bg-gradient-to-r hover:from-muted hover:to-muted/50 text-muted-foreground hover:text-foreground hover:shadow-md hover:transform hover:scale-[1.01]"
               )}
             >
-              <span className="text-sm">{specialization.name}</span>
-              {currentPath === specialization.path ? (
+              <span className="text-sm font-medium relative z-10">{specialization.name}</span>
+              <motion.div
+                initial={false}
+                animate={{
+                  opacity: currentPath === specialization.path ? 1 : 0,
+                  scale: currentPath === specialization.path ? 1 : 0.8
+                }}
+                transition={{ duration: 0.2 }}
+              >
                 <ChevronRight className="h-4 w-4" />
-              ) : (
-                <ChevronRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </motion.div>
+              <motion.div
+                className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                whileHover={{ x: 2 }}
+              >
+                {currentPath !== specialization.path && (
+                  <ChevronRight className="h-4 w-4 absolute right-3 top-1/2 transform -translate-y-1/2" />
+                )}
+              </motion.div>
+              {currentPath === specialization.path && (
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"
+                  initial={{ x: '-100%' }}
+                  animate={{ x: '100%' }}
+                  transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 3 }}
+                />
               )}
             </Link>
           </motion.div>

@@ -140,7 +140,7 @@ const DesktopNavigation = ({ isActive, location, isMBBSIndiaRoute = false }: Des
                   : "text-gray-700 hover:bg-gray-100"
               )}
             >
-              <span className="font-bold text-purple-600">PG</span>
+              <span className="text-black">PG</span>
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <div className="w-[320px] p-4 bg-white shadow-2xl rounded-lg border border-gray-100">

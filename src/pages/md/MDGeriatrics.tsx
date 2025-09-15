@@ -37,21 +37,36 @@ const MDGeriatrics: React.FC = () => {
           {/* Main Content */}
           <div className="flex-1">
             {/* Hero Section */}
-            <motion.section
-              className="mb-12"
+            <motion.section 
+              className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 via-background to-secondary/5 p-8 mb-12 border border-border/50"
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
             >
-              <motion.div className="text-center mb-8" variants={fadeInUp}>
-                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/20 px-4 py-2 rounded-full font-medium mb-6">
+              <div className="absolute inset-0 bg-grid-small opacity-30" />
+              <motion.div
+                className="relative z-10"
+                initial="hidden"
+                animate="visible"
+                variants={fadeInUp}
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-3 bg-primary/10 rounded-xl">
+                    <Activity className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h1 className="text-4xl font-bold text-foreground mb-2">
+                      MD Geriatrics
+                    </h1>
+                    <p className="text-xl text-muted-foreground">
+                      Comprehensive Care for the Elderly
+                    </p>
+                  </div>
+                </div>
+                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/20 px-4 py-2 rounded-full font-medium">
                   <Activity className="h-4 w-4" />
                   Elderly Care Specialization
                 </div>
-                <h1 className="text-4xl font-bold text-foreground">MD Geriatrics</h1>
-                <p className="text-xl text-muted-foreground mt-4 max-w-3xl mx-auto">
-                  Focus on medical care for the elderly, enhancing quality of life and managing age-related conditions
-                </p>
               </motion.div>
             </motion.section>
 
