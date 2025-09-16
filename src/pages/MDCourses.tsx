@@ -349,10 +349,9 @@ const MDCourses: React.FC = () => {
                       viewport={{ once: true }}
                       variants={animationVariants}
                       whileHover={{ 
-                        scale: 1.03, 
-                        y: -5,
-                        boxShadow: "0 25px 50px rgba(0,0,0,0.15)",
-                        transition: { duration: 0.3 }
+                        scale: 1.05, 
+                        y: -3,
+                        transition: { duration: 0.2 }
                       }}
                     >
                       <Link to={specialization.path} className="block h-full">

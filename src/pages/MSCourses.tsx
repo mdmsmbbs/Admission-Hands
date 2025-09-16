@@ -268,7 +268,7 @@ const MSCourses: React.FC = () => {
               <motion.p className="text-lg text-muted-foreground mb-6 text-center" variants={fadeInUp}>
                 Choose from diverse surgical specializations and build expertise in your chosen field.
               </motion.p>
-              <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {msSpecializations.map((specialization, index) => {
                   const IconComponent = specialization.icon;
                   const animationVariants = getAnimationVariants(specialization.animationType, index);
@@ -276,16 +276,15 @@ const MSCourses: React.FC = () => {
                   return (
                     <motion.div
                       key={specialization.id}
-                      className="bg-gradient-to-br from-card to-card/80 rounded-xl p-6 border border-border/50 hover:shadow-2xl hover:border-primary/40 transition-all duration-500 group min-h-[280px]"
+                      className="bg-gradient-to-br from-card to-card/80 rounded-xl p-4 border border-border/50 hover:shadow-xl hover:border-primary/40 transition-all duration-300 group min-h-[280px]"
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true }}
                       variants={animationVariants}
                       whileHover={{ 
-                        scale: 1.03, 
-                        y: -5,
-                        boxShadow: "0 25px 50px rgba(0,0,0,0.15)",
-                        transition: { duration: 0.3 }
+                        scale: 1.05, 
+                        y: -3,
+                        transition: { duration: 0.2 }
                       }}
                     >
                       <Link to={specialization.path} className="block h-full">
