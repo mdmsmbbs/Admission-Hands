@@ -271,7 +271,7 @@ const MDCourses: React.FC = () => {
                             <IconComponent className="h-5 w-5 text-primary" />
                           </div>
                           <h3 className="text-xs font-semibold text-foreground mb-1 leading-tight">{specialization.title}</h3>
-                          <p className="text-[10px] text-muted-foreground mb-2 line-clamp-2 flex-grow">{specialization.description}</p>
+                          <p className="text-[10px] text-muted-foreground mb-2 line-clamp-3 flex-grow">{specialization.description}</p>
                           <div className="flex items-center text-primary font-medium text-[10px] group-hover:text-primary/80 transition-colors">
                             Learn More <ArrowRight className="ml-1 h-2 w-2" />
                           </div>

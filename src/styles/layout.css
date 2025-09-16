@@ -1,6 +1,6 @@
 
 /* Fix NavigationMenu dropdown positioning and visibility on mobile */
-@layer components {
+/* @layer components { */
   .NavigationMenuContent {
     @apply z-50 max-w-[calc(100vw-1rem)] sm:max-w-none bg-white;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -29,7 +29,7 @@
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
-}
+/* } */
 
 /* Fixed positioning for header and live alerts - Responsive */
 header {

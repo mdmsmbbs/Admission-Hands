@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ChevronRight, Stethoscope, Heart, Baby, X, Syringe, Brain, Wind, Ambulance, Microscope, Bug, Pill, Search, Home, CircleDot, Zap, Activity, Target } from 'lucide-react';
+import { ChevronRight, Stethoscope, Heart, Baby, X, Syringe, Brain, Wind, Ambulance, Microscope, Bug, Pill, Search, Home, CircleDot, Zap, Activity, Target, Dna, HeadphonesIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const mdSpecializations = [
@@ -21,8 +21,8 @@ const mdSpecializations = [
   { id: 'nuclear-medicine', name: 'Nuclear Medicine', path: '/pg-medical/md-courses/nuclear-medicine', icon: Zap, color: 'text-yellow-500' },
   { id: 'geriatrics', name: 'Geriatrics', path: '/pg-medical/md-courses/geriatrics', icon: Activity, color: 'text-violet-500' },
   { id: 'sports-medicine', name: 'Sports Medicine', path: '/pg-medical/md-courses/sports-medicine', icon: Target, color: 'text-emerald-500' },
-  { id: 'dermatology', name: 'Dermatology', path: '/pg-medical/md-courses/dermatology', icon: CircleDot, color: 'text-pink-400' },
-  { id: 'family-medicine', name: 'Family Medicine', path: '/pg-medical/md-courses/family-medicine', icon: Home, color: 'text-green-600' },
+  { id: 'dermatology', name: 'Dermatology', path: '/pg-medical/md-courses/dermatology', icon: Dna, color: 'text-pink-400' },
+  { id: 'family-medicine', name: 'Family Medicine', path: '/pg-medical/md-courses/family-medicine', icon: HeadphonesIcon, color: 'text-green-600' },
 ];
 
 interface MDSidebarProps {

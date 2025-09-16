@@ -1,5 +1,5 @@
 
-@layer utilities {
+/* @layer utilities { */
   /* Hide scrollbar for chrome, safari and opera */
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
@@ -28,7 +28,7 @@
     text-shadow: 0 0 6px rgba(234, 56, 76, 0.5);
     animation: textPulse 2s infinite alternate;
   }
-}
+/* } */
 
 /* Performance optimizations */
 @media (prefers-reduced-motion: no-preference) {
